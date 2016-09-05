@@ -115,18 +115,15 @@ abstract class Section{
 			<ul>");
 		
 		
-		$artistSubtitles = fopen("../Riera/assets/artbrutassets/".$subsection."/subtitles.txt", 'rb');
 		if(count($pictures)>0){
 			//-1 for the personal picture
 			for($i=0; $i<count($pictures)-1; $i++){
 				fwrite($indexStream, "<li><a class=\"ns-img\" href=\"".$pictures[i]."\"></a>\n");
-				fscanf($artistSubtitles, " %[ -~]", $subtitle);
-				
+				if(!is_null($subtitles[i]))
 				fwrite($indexStream, "<span class = \"caption\">".$subtitles[i]."</span>\n</li>\n");
-
-				
 			}
 		}
+
 
 		fwrite($indexStream, "
 			</ul>
@@ -138,10 +135,10 @@ abstract class Section{
 		<div class=\"sectionmenu\" id=\"artistsectionmenu\">
 		<ul>");
 
-		if(file_exists('../Riera/assets/artbrutassets/'.$subsection."/personalphoto.jpg")){
-			fwrite($indexStream, "
+		fwrite($indexStream, "
 				<li><img src=\"/Riera/assets/artbrutassets/".$subsection."/personalphoto.jpg\" width=\"150\" height=\"150\" style=\"opacity: .8;\"></img></li>");
-		}
+		
+
 
 		fwrite($indexStream, "
 			</ul>
@@ -149,16 +146,17 @@ abstract class Section{
 			<div class=\"sectiontext\" id=\"artistsectiontext\">
 			<div class=\"sectiontitle\" id=\"artistssectiontitle\">");
 		
-		$artistInfo = fopen('../Riera/assets/artbrutassets/'.$subsection.'/bio.txt', 'r');
-		fscanf($artistInfo, " %[ -~]", $artistName);
-		fwrite($indexStream, $artistName."\n");
+
+		$artistBio = explode("\n", file_get_contents('../Riera/assets/artbrutassets/'.$subsection.'/bio.txt'));
+		$artistBioIndex = 0;
+
+		fwrite($indexStream, $artistBio[$artistBioIndex++]."\n");
 
 		fwrite($indexStream, "
 			</div>
 		<div class=\"sectionsubtitle\" id=\"artistssubsection\">");
 		
-		fscanf($artistInfo, "%[ -~]", $artistYear);
-		fwrite($indexStream, $artistYear."\n");
+		fwrite($indexStream, $artistBio[$artistBioIndex++]."\n");
 
 		fwrite($indexStream, "
 			</div>
@@ -168,6 +166,7 @@ abstract class Section{
 		fscanf($artistInfo, "%[ -~]", $artistBio);
 		fwrite($indexStream, $artistBio);
 		fwrite($indexStream, "<br/></p>\n");
+
 
 		if(!feof($artistInfo)){
 			fwrite($indexStream, "<span style=\"font-weight: bold\">\n");
@@ -192,7 +191,6 @@ abstract class Section{
 		
 		fclose($artistInfo);
 		fclose($indexStream);
-	*/
 	}
 
 	protected function displayPage($fullview, $subsection, $id){
