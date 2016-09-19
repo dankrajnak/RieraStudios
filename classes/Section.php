@@ -42,7 +42,6 @@ abstract class Section{
 
 	private function findSubtitles($workingDirectory){
 		$d = dir($workingDirectory);
-		$foundIt = false;
 		$subtitlesPath = "notfound";
 		while($subtitlesPath === "notfound" && false !== ($entry = $d->read())){
 			if(is_dir($d->path.'/'.$entry) && strpos($entry, '.') !== 0){
@@ -50,7 +49,7 @@ abstract class Section{
 			}
 			
 			else if($subtitlesPath === "notfound" && substr($entry, strpos($entry, '.')) === '.txt' 
-				&& false !== stripos($entry, 'subtitles')){
+				&& false !== stripos($entry, 'subtitle')){
 				$subtitlesPath = $d->path.'/'.$entry;
 			}
 		}
@@ -58,22 +57,48 @@ abstract class Section{
 	}
 
 	private function parseSubtitles($subtitlesPath){
-		$subtitles = array();
-		$subtitlesStream = fopen($subtitlesPath, "r+b");
-		while(false !== ($subtitle = fgets($subtitlesStream))){
-		$subtitle = trim($subtitle);
-			if($i<10){
-				$subtitle = substr($subtitle, 3);
-				$subtitle = trim($subtitle);
+		$subtitles = explode("\n", file_get_contents($subtitlesPath));
+		for($i=0; $i<count($subtitles); $i++){
+			trim($subtitles[$i]);
+			//Trim off leading numbers.  Less than 9 because when the number becomes two digits, 
+			//have to trim off the extra digit.
+			if($i<9){
+				$subtitles[$i] = substr($subtitles[$i], 2);
+				$subtitles[$i] = trim($subtitles[$i]);
 			}
 			else{
-				substr($subtitle, 4);
-				$subtitle = trim($subtitle);
+				$subtitles[$i] = substr($subtitles[$i], 3);
+				trim($subtitles[$i]);
 			}
-			$subtitles[] = $subtitle;
 		}
 		return $subtitles;
 	}
+
+	private function findBio($workingDirectory){
+		$d = dir($workingDirectory);
+		$bioPath = "notfound";
+		while($bioPath === "notfound" && false !== ($entry = $d->read())){
+			if(is_dir($d->path.'/'.$entry) && strpos($entry, '.') !== 0){
+				$bioPath = $this->findBio($d->path.'/'.$entry);
+			}
+			
+			else if($bioPath === "notfound" && substr($entry, strpos($entry, '.')) === '.txt' 
+				&& false !== stripos($entry, 'bio')){
+				$bioPath = $d->path.'/'.$entry;
+			}
+		}
+		return $bioPath;
+	}
+
+	private function parseBio($bioPath){
+		$bio = explode("\n", file_get_contents($bioPath));
+		foreach($bio as $key=>$entry){
+			if(trim($entry) == '')
+				unset($bio[$key]);
+		}
+		return $bio;
+	}
+	
 
 
 
@@ -93,7 +118,8 @@ abstract class Section{
 		else{
 			return;
 		}
-	
+
+		//--------- Find pictures, subtitles, and create slider -----------
 		//Find all pictures for this artist.
 		$pictures = $this->findPictures("../Riera/assets/artbrutassets/".$subsection);
 		$pictures = $this->sortPictures($pictures);
@@ -112,15 +138,14 @@ abstract class Section{
 			<div id=\"ninja-slider\">
 			<div>
 			<div class =\"slider-inner\">
-			<ul>");
-		
+			<ul>\n");
 		
 		if(count($pictures)>0){
 			//-1 for the personal picture
-			for($i=0; $i<count($pictures)-1; $i++){
-				fwrite($indexStream, "<li><a class=\"ns-img\" href=\"".$pictures[i]."\"></a>\n");
-				if(!is_null($subtitles[i]))
-				fwrite($indexStream, "<span class = \"caption\">".$subtitles[i]."</span>\n</li>\n");
+			for($i=1; $i<count($pictures); $i++){
+				fwrite($indexStream, "<li><a class=\"ns-img\" href=\"".substr($pictures[$i], 2)."\"></a>\n");
+				if(!is_null($subtitles[$i-1]))
+				fwrite($indexStream, "<span class = \"caption\">".$subtitles[$i-1]."</span>\n</li>\n");
 			}
 		}
 
@@ -136,60 +161,60 @@ abstract class Section{
 		<ul>");
 
 		fwrite($indexStream, "
-				<li><img src=\"/Riera/assets/artbrutassets/".$subsection."/personalphoto.jpg\" width=\"150\" height=\"150\" style=\"opacity: .8;\"></img></li>");
+				<li><img src=\"".substr($pictures['personal'], 2)."\" width=\"150\" height=\"150\" style=\"opacity: .8;\"></img></li>");
 		
 
 
+		//--------- Find and Write Bio -----------
+		//Find Bio
+		$artistBio = $this->parseBio($this->findBio("../Riera/assets/artbrutassets/".$subsection));
+		$artistBioIndex = 0;
+	
+
+		//Title of Bio (includes name)
 		fwrite($indexStream, "
 			</ul>
 			</div>
 			<div class=\"sectiontext\" id=\"artistsectiontext\">
 			<div class=\"sectiontitle\" id=\"artistssectiontitle\">");
-		
-
-		$artistBio = explode("\n", file_get_contents('../Riera/assets/artbrutassets/'.$subsection.'/bio.txt'));
-		$artistBioIndex = 0;
-
 		fwrite($indexStream, $artistBio[$artistBioIndex++]."\n");
 
+		//Subtitle (includes DOB)
 		fwrite($indexStream, "
 			</div>
 		<div class=\"sectionsubtitle\" id=\"artistssubsection\">");
-		
 		fwrite($indexStream, $artistBio[$artistBioIndex++]."\n");
 
+		//Write the bio
 		fwrite($indexStream, "
 			</div>
 			<div class=\"sectionbody\" id=\"artistsectionbody\">
 			<p>");
-
-		fscanf($artistInfo, "%[ -~]", $artistBio);
-		fwrite($indexStream, $artistBio);
+		while($artistBioIndex<count($artistBio) && strtolower($artistBio[$artistBioIndex]) !== "exhibitions"){
+		fwrite($indexStream, $artistBio[$artistBioIndex]);
 		fwrite($indexStream, "<br/></p>\n");
-
-
-		if(!feof($artistInfo)){
-			fwrite($indexStream, "<span style=\"font-weight: bold\">\n");
-			fscanf($artistInfo, '%[ -~]', $artistExhibitions);
-			fwrite($indexStream, $artistExhibitions);
-			fwrite($indexStream, "</span>");
-			fwrite($indexStream, "<ul>");
+		$artistBioIndex++;
+		}
+		
+		//Test to see if there's an exhibition section
+		if($artistBioIndex < count($artistBio)){
+			//write exhibitions title and skip "exhibitions" element in array
+			$artistBioIndex++;
 			
-			while(!feof($artistInfo)){
-				fscanf($artistInfo, '%[ -~]', $artistExhibitions);
-				fwrite($indexStream, '<li>'.$artistExhibitions."</li>\n");
+			fwrite($indexStream, "<span style=\"font-weight: bold\">Exhibitions</span>\n<ul>");
+			while($artistBioIndex<count($artistBio)){
+				fwrite($indexStream, '<li>'.$artistBio[$artistBioIndex]."</li>\n");
+				$artistBioIndex++;
 			}
 			fwrite($indexStream, "</ul>");
 		}
-
+		
 		fwrite($indexStream, "
 			</div>
 			</div>
 			</div>");
 		fflush($indexStream);
 
-		
-		fclose($artistInfo);
 		fclose($indexStream);
 	}
 
@@ -224,9 +249,12 @@ abstract class Section{
 			require('standardElements/standardNavBar.php');
 			echo "\n<div class=\"navbarscroll\"></div>";
 			echo "\n<div class=\"bodycontent\">\n";
-			if(!file_exists($view))
+			//if(!file_exists($view))
+			{
+				if($subsection)
 			$this->createArtistPage($subsection);
 			require($view);
+			}
 
 			echo "\n</div>\n";
 			echo "<div class=\"footer\">\n";

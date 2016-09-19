@@ -61,7 +61,7 @@
 					</a>
 				</td>
 				<td>
-					<a href="/Riera/artbrutartists/Darien-Robiana-Alonso/">
+					<a href="/Riera/artbrutartists/Darien-Robaina-Alonso/">
 					<image class="tablepicture" id="artisttablepicture" src="/Riera/assets/images/artbrutartists/darienartist.jpg"></image>
 					<image class="tablepicturered" id="artisttablepicture" src="/Riera/assets/images/artbrutartists/darienartistred.jpg"></image>
 					<span>DARIEN ROBAINA ALONSO</span>
