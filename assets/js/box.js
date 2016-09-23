@@ -184,10 +184,15 @@ function Dot(){
 					line(dotsArray[j].getXPos(), dotsArray[j].getYPos(), dotsArray[i].getXPos(), dotsArray[i].getYPos());
 						
 					//Weighted average of new velocity.  Groups and slows the dotsArray 
-					dotsArray[i].setYVelocity((dotsArray[i].getYVelocity()*500+dotsArray[j].getYVelocity())/501);			
-					dotsArray[i].setXVelocity((dotsArray[i].getXVelocity()*500+dotsArray[j].getXVelocity())/501);
-					dotsArray[j].setYVelocity((dotsArray[j].getYVelocity()*500+dotsArray[i].getYVelocity())/501);
-					dotsArray[j].setXVelocity((dotsArray[j].getXVelocity()*500+dotsArray[i].getXVelocity())/501);
+					if(Math.abs(dotsArray[i].getXVelocity()-dotsArray[j].getXVelocity())>.1){
+						dotsArray[i].setXVelocity((dotsArray[i].getXVelocity()*500+dotsArray[j].getXVelocity())/501);
+						dotsArray[j].setXVelocity((dotsArray[j].getXVelocity()*500+dotsArray[i].getXVelocity())/501);
+					}
+
+					if(Math.abs(dotsArray[i].getYVelocity()-dotsArray[j].getYVelocity())>.1){
+						dotsArray[i].setYVelocity((dotsArray[i].getYVelocity()*500+dotsArray[j].getYVelocity())/501);			
+						dotsArray[j].setYVelocity((dotsArray[j].getYVelocity()*500+dotsArray[i].getYVelocity())/501);
+					}
 				}
 			j++;
 			}
