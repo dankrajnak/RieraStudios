@@ -173,6 +173,7 @@ abstract class Section{
 		<ul>");
 
 		fwrite($indexStream, "
+				<li id=\"backbutton\"><a href=\"/Riera/artbrutartists\"><span>&lt</span> Back</a></li>
 				<li><img src=\"".substr($pictures['personal'], 2)."\" width=\"150\" height=\"150\" style=\"opacity: .8;\"></img></li>");
 		
 
@@ -264,12 +265,13 @@ abstract class Section{
 			require('standardElements/standardNavBar.php');
 			echo "\n<div class=\"navbarscroll\"></div>";
 			echo "\n<div class=\"bodycontent\">\n";
-			//if(!file_exists($view))
+			if(!file_exists($view))
 			{
 				if($subsection)
 			$this->createArtistPage($subsection);
-			require($view);
 			}
+			
+			require($view);
 
 			echo "\n</div>\n";
 			echo "<div class=\"footer\">\n";

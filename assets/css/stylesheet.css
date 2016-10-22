@@ -320,7 +320,7 @@ canvas{
 
 
 .sectionmenu{
-	margin-left: 10px;
+	left: 80px;
 	margin-top: 150px;
 	padding-right: 10px;
 	display: inline-block;
@@ -333,24 +333,25 @@ canvas{
 	margin-left: 10px;
 }
 
+
 .sectionmenu ul{
 	min-width: 200px;
 	list-style-type: none;
-	margin-left: 80px;
 	text-align: left;
 	text-decoration: none;
 	display: block;
-	padding: 5px 0px 5px 0px;
 }
 
 .sectionmenu ul img{
-	margin-left: 80px;
+	display: block;
+	margin: auto;
 }
 .sectionmenu li{
+	margin: auto;
 	margin-bottom: 30px;
-
 }
 .sectionmenu a{
+	text-align: center;
 	text-decoration: none;
 	color: #DE483F;
 	font-size: 18px;
@@ -358,7 +359,28 @@ canvas{
 	padding: 5px 10px 5px 10px;
 }
 
-.sectionmenu a:hover{
+
+.sectionmenu #backbutton a, .sectionmenu #backbutton{
+	text-align: center;
+	display: block;
+	margin: auto;
+	font-size: 18px;
+	padding: 0px;
+	max-width: 150px;
+	margin-bottom: 0px;
+}
+
+#backbutton span {
+	color: black;
+}
+
+.sectionmenu #backbutton {
+	position: relative;
+	bottom: 20px;
+}
+
+
+.sectionmenu a:not(#backbutton):hover:{
 	color: white;
 	background-color: #DE483F;
 	border-color: #DE483F;
@@ -413,12 +435,14 @@ canvas{
 /*Artist Table style*/ 
 
 .sectiontable{
+	display: block;
 	margin: auto;
 	margin-top: 40px;
 	width: 90%
 }
 
-.sectiontablebody{
+.sectiontablebody, .sectiontable tbody{
+	display: block;
 	margin: auto;
 	width: 90%;
 	font-weight: lighter;
@@ -435,7 +459,9 @@ canvas{
 .sectiontablecontent tr{
 	display: block;
 	width: 100%;
+	margin: 0px auto 20px auto;
 	margin-bottom: 20px;
+
 }
 
 #exhibitionsectiontablecontent tr{

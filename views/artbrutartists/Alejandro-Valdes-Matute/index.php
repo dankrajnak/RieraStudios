@@ -32,10 +32,12 @@
 <span class = "caption">Color pencil on paper, 42 x 30 cm,</span>
 </li>
 <li><a class="ns-img" href="/Riera/assets/artbrutassets/Alejandro-Valdes-Matute/slider/10.jpg"></a>
-<span class = "caption"> Crayon and graphite, 40 x 45.5 cm, </span>
+<span class = "caption"> Crayon and graphite, 40 x 45.5 cm, 
+</span>
 </li>
 <li><a class="ns-img" href="/Riera/assets/artbrutassets/Alejandro-Valdes-Matute/slider/11.jpg"></a>
-<span class = "caption"> Color pencil on paper, 32.5 x 21.5 cm, </span>
+<span class = "caption"> Color pencil on paper, 32.5 x 21.5 cm, 
+</span>
 </li>
 <li><a class="ns-img" href="/Riera/assets/artbrutassets/Alejandro-Valdes-Matute/slider/12.jpg"></a>
 <span class = "caption"> Crayon and graphite, 21.5 x 28 cm,  </span>
@@ -49,6 +51,7 @@
 		</div>
 		<div class="sectionmenu" id="artistsectionmenu">
 		<ul>
+				<li id="backbutton"><a href="/Riera/artbrutartists"><span>&lt</span> Back</a></li>
 				<li><img src="/Riera/assets/artbrutassets/Alejandro-Valdes-Matute/personalphoto.jpg" width="150" height="150" style="opacity: .8;"></img></li>
 			</ul>
 			</div>
