@@ -6,7 +6,7 @@ It should be online soon!
 
 ##Built from scratch
 
-This is my first time building a website and I did it completely from scratch.  I didn't know about static-site generators, so I used a custom php framework to include partials like the navbar and footer on every page.  I also created scrips to generate HTML pages from a central repository of artist information and pictures.  There's probably a few bugs, and some of it may not make complete sense, but give me some slack!
+This is my first time building a website and I did it completely from scratch.  I didn't know about static-site generators, so I used a custom php framework to include partials like the navbar and footer on every page.  All of the css, and the interactive element on the front page are mine as well.  I also created scrips to generate HTML pages from a central repository of artist information and pictures.  There's probably a few bugs, and some of it may not make complete sense, but give me some slack, it's my first!
 
 ##TODO
 * Add blog button to navigation bar
