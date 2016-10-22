@@ -9,9 +9,9 @@ It should be online soon!
 This is my first time building a website and I did it completely from scratch.  I didn't know about static-site generators, so I used a custom php framework to include partials like the navbar and footer on every page.  I also created scrips to generate HTML pages from a central repository of artist information and pictures.  There's probably a few bugs, and some of it may not make complete sense, but give me some slack!
 
 ##TODO
-*Add blog button to navigation bar
-*Fix directory issues with online version
-*Make mobile-compliant
-*Fix Spanish character issues
-*Complete exhibition pages
-*Update bios with most recent information
+* Add blog button to navigation bar
+* Fix directory issues with online version
+* Make mobile-compliant
+* Fix Spanish character issues
+* Complete exhibition pages
+* Update bios with most recent information
