@@ -11,6 +11,7 @@
 				</div>
 		</li>
 		<li><a href="/Riera/exhibitions/">EXHIBITIONS</a></li>
+		<li><a href="http://rierastudioart.cubava.cu">BLOG</a></li>
 		<li><a href="/Riera/press/">PRESS RELEASE</a></li>
 		<li><a href="/Riera/contact/">CONTACT</a></li>
 	</ul>

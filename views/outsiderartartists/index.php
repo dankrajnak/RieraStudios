@@ -82,28 +82,38 @@
 <script type="text/javascript">
 
 	var pictures = document.querySelectorAll(".tablepicture, .tablepicturered");
-	var tds = document.querySelectorAll("tr, td");
+	var tds = document.querySelectorAll("tr td");
+	var spans = document.querySelectorAll(".sectiontablecontent span");
 
 
 	document.addEventListener("DOMContentLoaded", function(event){
 	
 	if(window.innerWidth>980){
 		for(var i=0; i<pictures.length; i++){
-			pictures[i].setAttribute("height", window.innerWidth*.27);	
+			pictures[i].setAttribute("height", window.innerWidth*.27);
+			pictures[i].setAttribute("width", window.innerWidth*.27);
 		}
+		
 		for(var i=0; i<tds.length; i++){
 			tds[i].setAttribute("height", window.innerWidth*.27+30);
+			tds[i].setAttribute("width", window.innerWidth*.27+30);
+			
+
 		}
+
 
 	}
 	else{
 		for(var i=0; i<pictures.length; i++){
-			pictures[i].setAttribute("height", 980*.27);	
+			pictures[i].setAttribute("height", 980*.27);
+			pictures[i].setAttribute("width", 980*.27);	
 
 		}
 		for(var i=0; i<tds.length; i++){
 			tds[i].setAttribute("height", 980*.27+30);
+			tds[i].setAttribute("width", 980*.27+30);
 		}
+
 
 
 	}
@@ -112,21 +122,27 @@
 	window.addEventListener("resize", function(){
 	if(window.innerWidth>980){
 		for(var i=0; i<pictures.length; i++){
-			pictures[i].setAttribute("height", window.innerWidth*.27);	
+			pictures[i].setAttribute("height", window.innerWidth*.27);
+			pictures[i].setAttribute("width", window.innerWidth*.27);	
 		}
 		for(var i=0; i<tds.length; i++){
 			tds[i].setAttribute("height", window.innerWidth*.27+30);
+			tds[i].setAttribute("width", window.innerWidth*.27+30);
 		}
+
 
 	}
 	else{
 		for(var i=0; i<pictures.length; i++){
-			pictures[i].setAttribute("height", 980*.27);	
+			pictures[i].setAttribute("height", 980*.27);
+			pictures[i].setAttribute("width", 980*.27);	
 
 		}
 		for(var i=0; i<tds.length; i++){
 			tds[i].setAttribute("height", 980*.27+30);
+			tds[i].setAttribute("width", 980*.27+30);
 		}
+
 
 	}
 	})
