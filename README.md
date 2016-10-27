@@ -11,6 +11,5 @@ This is my first time building a website and I did it completely from scratch.  
 ##TODO
 * Fix directory issues with online version
 * Make mobile-compatible
-* Fix Spanish character issues
 * Complete exhibition pages
 * Update bios with most recent information
