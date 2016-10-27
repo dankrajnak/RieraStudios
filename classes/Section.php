@@ -92,10 +92,14 @@ abstract class Section{
 
 	private function parseBio($bioPath){
 		$bio = explode("\n", file_get_contents($bioPath));
+		
 		foreach($bio as $key=>$entry){
-			if(trim($entry) == '')
+			if(trim($entry) == ''){
 				unset($bio[$key]);
+			}
+			$bio[$key] = htmlentities($entry);
 		}
+
 		return $bio;
 	}
 	
@@ -265,11 +269,11 @@ abstract class Section{
 			require('standardElements/standardNavBar.php');
 			echo "\n<div class=\"navbarscroll\"></div>";
 			echo "\n<div class=\"bodycontent\">\n";
-			if(!file_exists($view))
-			{
+			//if(!file_exists($view))
+			//{
 				if($subsection)
 			$this->createArtistPage($subsection);
-			}
+			//}
 			
 			require($view);
 

@@ -51,7 +51,7 @@
 			</ul>
 			</div>
 			<div class="sectiontext" id="artistsectiontext">
-			<div class="sectiontitle" id="artistssectiontitle">Victor M. Moreno Piñeiro
+			<div class="sectiontitle" id="artistssectiontitle">Victor M. Moreno Pi&ntilde;eiro
 
 			</div>
 		<div class="sectionsubtitle" id="artistssubsection">Villa Clara, 1951 - Havana, 2015
@@ -66,6 +66,9 @@ Main Exhibitions <br/></p>
 2000. Abstracts and Imaginations. The University Student Federation's House. Havana, Cuba.<br/></p>
 2000. From the Sea to the Legend. October 10 Gallery. Havana, Cuba. <br/></p>
 1984. Experiences. Guanabacoa Gallery. Havana, Cuba.<br/></p>
+<br/></p>
+<br/></p>
+<br/></p>
 
 			</div>
 			</div>

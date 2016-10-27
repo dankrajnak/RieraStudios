@@ -85,6 +85,9 @@
 <li>2014. Echoes from unconsciousness. Spanish Embassy at Cuba. Havana, Cuba. </li>
 <li>2013. New Outsider Art from Cuba. Spanish Cultural Center of Miami. Miami, USA.</li>
 <li>2013. Simple Art. RIERA STUDIO. Havana, Cuba.</li>
+<li></li>
+<li> </li>
+<li></li>
 </ul>
 			</div>
 			</div>

@@ -61,7 +61,14 @@
 
 			</div>
 			<div class="sectionbody" id="artistsectionbody">
-			<p>He really never was interested in drawing or any other artistic manifestation. As an adult, he suffered the lost of his small son and he began to be interested in Judaism. He started to write biblical passages on papers, cardboards, tables and any kind of material and even in the walls of his own house.  Later, he added some drawings and diagrams to his texts, all related to Jewish traditions and ceremonies. The way he combines the texts and drawings in his works, produces an entangled and almost illegible material that he’s the only one who can completely understand it.<br/></p>
+			<p>He really never was interested in drawing or any other artistic manifestation. As an adult, he suffered the lost of his small son and he began to be interested in Judaism. He started to write biblical passages on papers, cardboards, tables and any kind of material and even in the walls of his own house.  Later, he added some drawings and diagrams to his texts, all related to Jewish traditions and ceremonies. The way he combines the texts and drawings in his works, produces an entangled and almost illegible material that he&rsquo;s the only one who can completely understand it.<br/></p>
+<br/></p>
+   <br/></p>
+<br/></p>
+<br/></p>
+<br/></p>
+<br/></p>
+<br/></p>
 
 			</div>
 			</div>

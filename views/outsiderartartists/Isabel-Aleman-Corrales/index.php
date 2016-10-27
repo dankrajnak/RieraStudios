@@ -48,16 +48,22 @@
 			<div class="sectiontitle" id="artistssectiontitle">Isabel Aleman Corrales
 
 			</div>
-		<div class="sectionsubtitle" id="artistssubsection">Villa Clara, 1915 – †
+		<div class="sectionsubtitle" id="artistssubsection">Villa Clara, 1915 &ndash; &dagger;
 
 			</div>
 			<div class="sectionbody" id="artistsectionbody">
-			<p>Isabel graduated from the Normal School for Teachers and for almost 30 years she practiced her profession in primary education schools. She retired in 1962 because she was affected by a partial loss of her voice. During 1960-1961 she began painting as a self-taught artist motivated by her friend José Soane. She later joined a singular group of self-taught artists called Signos (Signs), led by Cuban writer and artist Samuel Feijóo. Her works show a unique world of strange and amorphous vegetative forms with big and expressive animal eyes like the ones cyclopes have and also with sweet claws. All these forms are flat, without any intention to create volume in her drawings, except the textures produced by the use of tempera and crayon.   <br/></p>
+			<p>Isabel graduated from the Normal School for Teachers and for almost 30 years she practiced her profession in primary education schools. She retired in 1962 because she was affected by a partial loss of her voice. During 1960-1961 she began painting as a self-taught artist motivated by her friend Jos&eacute; Soane. She later joined a singular group of self-taught artists called Signos (Signs), led by Cuban writer and artist Samuel Feij&oacute;o. Her works show a unique world of strange and amorphous vegetative forms with big and expressive animal eyes like the ones cyclopes have and also with sweet claws. All these forms are flat, without any intention to create volume in her drawings, except the textures produced by the use of tempera and crayon.   <br/></p>
 Main Exhibitions<br/></p>
 1985. Good bye to the monsters? Provincial Museum of Villa Clara. Santa Clara, Cuba.<br/></p>
-1983. Inventive Art from Cuba. Collection de L’ Art Brut. Lausanne, Switzerland.<br/></p>
+1983. Inventive Art from Cuba. Collection de L&rsquo; Art Brut. Lausanne, Switzerland.<br/></p>
 1982. Popular Artists from Las Villas. National Library Jose Marti. Havana, Cuba.<br/></p>
 1981. The sweet monsters. Gallery L. Havana, Cuba.<br/></p>
+<br/></p>
+  <br/></p>
+ <br/></p>
+<br/></p>
+   <br/></p>
+<br/></p>
 
 			</div>
 			</div>

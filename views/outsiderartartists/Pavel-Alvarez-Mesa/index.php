@@ -61,9 +61,11 @@
 
 			</div>
 			<div class="sectionbody" id="artistsectionbody">
-			<p>As a self-taught artist, Pavel uses different supports to express his recurrent ideas in his own particular way. However, his preferred media is the canvas and the use of a wide range of colors. He likes to paint singular type of faces and little humanoid forms; to which he even gave names. That’s how Nuti and Finger were born. They appear repetitively in his paintings representing a whole spectrum of emotions, desires and disappointments; most of them from his own personal life, others from the people who surrounded him. His paintings question the individual consciousness of the viewer. He turns to the common individuals and their darkest emotions: hatred, envy, betrayal; as part of the daily veil that is around him.       <br/></p>
+			<p>As a self-taught artist, Pavel uses different supports to express his recurrent ideas in his own particular way. However, his preferred media is the canvas and the use of a wide range of colors. He likes to paint singular type of faces and little humanoid forms; to which he even gave names. That&rsquo;s how Nuti and Finger were born. They appear repetitively in his paintings representing a whole spectrum of emotions, desires and disappointments; most of them from his own personal life, others from the people who surrounded him. His paintings question the individual consciousness of the viewer. He turns to the common individuals and their darkest emotions: hatred, envy, betrayal; as part of the daily veil that is around him.       <br/></p>
 <span style="font-weight: bold">Exhibitions</span>
 <ul><li>2014. Outsider 2. RIERA STUDIO. Havana, Cuba. </li>
+<li></li>
+<li></li>
 </ul>
 			</div>
 			</div>

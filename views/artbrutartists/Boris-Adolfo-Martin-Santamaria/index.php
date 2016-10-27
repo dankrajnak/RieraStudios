@@ -54,7 +54,7 @@
 			</ul>
 			</div>
 			<div class="sectiontext" id="artistsectiontext">
-			<div class="sectiontitle" id="artistssectiontitle">Boris Adolfo Martín Santamaria
+			<div class="sectiontitle" id="artistssectiontitle">Boris Adolfo Mart&iacute;n Santamaria
 
 			</div>
 		<div class="sectionsubtitle" id="artistssubsection">Havana, 1971
@@ -70,7 +70,7 @@
 <li>2015. Second Selection from the NAEMI Art Collection. Borders Gallery. Miami, USA.</li>
 <li>2015. New Outsider Art from Cuba. Lehigh University Museum. Pennsylvania, USA.</li>
 <li>2015. Riera Studio: Art Brut Project Cuba. Christian Berst Art Brut (Klein and Berst). New York, USA.</li>
-<li>2014. Paños. Prison Break. Christian Berst Art Brut (Klein and Berst). Paris, France.</li>
+<li>2014. Pa&amp;ntildeos. Prison Break. Christian Berst Art Brut (Klein and Berst). Paris, France.</li>
 <li>2014. Echoes from unconsciousness. Spanish Embassy at Cuba. Havana, Cuba. </li>
 <li>2013. New Outsider Art from Cuba. Spanish Cultural Center of Miami. Miami, USA.</li>
 </ul>

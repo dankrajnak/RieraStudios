@@ -57,6 +57,7 @@ Main Exhibitions<br/></p>
 1987. Moya - non imperialistic. Wilfredo Lam Gallery. Havana, Cuba.<br/></p>
 1986. 22 sculptures in wood and one painting. Municipal Gallery. Guantanamo, Cuba. <br/></p>
 1986. First Hall of the City. Municipal Gallery. Guantanamo, Cuba. <br/></p>
+<br/></p>
 
 			</div>
 			</div>

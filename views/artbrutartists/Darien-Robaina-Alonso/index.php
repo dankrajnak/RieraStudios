@@ -54,16 +54,20 @@
 			</ul>
 			</div>
 			<div class="sectiontext" id="artistsectiontext">
-			<div class="sectiontitle" id="artistssectiontitle">Darién Robaina Alonso 
+			<div class="sectiontitle" id="artistssectiontitle">Dari&eacute;n Robaina Alonso 
 
 			</div>
-		<div class="sectionsubtitle" id="artistssubsection">Pinar del Río, 1984
+		<div class="sectionsubtitle" id="artistssubsection">Pinar del R&iacute;o, 1984
 
 			</div>
 			<div class="sectionbody" id="artistsectionbody">
-			<p>Darien’s childhood was particularly tough. He was born with Down’s syndrome but also he had heart problems at birth. In addition, he got leukemia when he was 4 years old, and an irreversible decrease of sight. His inner strength and the unconditional support of his mother made possible for him to overcome these problems, and also made him able to achieve a meaningful development in his communication skills and language despite of his disabilities.  Darien’s creativity is outstanding. His skills for plastic arts gave him the possibility to use several materials and different ways to express himself. The stories his mother used to tell him since he was a kid became the principal source of his inspiration, so did the daily experiences, dreams, and fantasies. Gnomes, goblins, witches, forest animals, among others are the characters created by him. Countless creatures placed in colored worlds or just using graphite shades.<br/></p>
+			<p>Darien&rsquo;s childhood was particularly tough. He was born with Down&rsquo;s syndrome but also he had heart problems at birth. In addition, he got leukemia when he was 4 years old, and an irreversible decrease of sight. His inner strength and the unconditional support of his mother made possible for him to overcome these problems, and also made him able to achieve a meaningful development in his communication skills and language despite of his disabilities.  Darien&rsquo;s creativity is outstanding. His skills for plastic arts gave him the possibility to use several materials and different ways to express himself. The stories his mother used to tell him since he was a kid became the principal source of his inspiration, so did the daily experiences, dreams, and fantasies. Gnomes, goblins, witches, forest animals, among others are the characters created by him. Countless creatures placed in colored worlds or just using graphite shades.<br/></p>
 <span style="font-weight: bold">Exhibitions</span>
 <ul><li>2015. 3 x 21. RIERA STUDIO. Havana, Cuba.</li>
+<li> </li>
+<li></li>
+<li></li>
+<li></li>
 </ul>
 			</div>
 			</div>

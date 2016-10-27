@@ -64,7 +64,7 @@
 			<p>He is a bachelor in civil construction technician's school. Later he got the bachelor's degree in Sport Education but started working making handcrafted products. During his childhood he lived in an urban community with a social underprivileged situation, which has been a significant influence in all his work. He began creating sculptures using remnant and pieces of wood and metal. Usually, he uses materials he finds in collapsed buildings and in the garbage containers. He combines all these recycled elements in a singular way to create human forms, animals and characters of comic books. His work involves an ironical social and political criticism. He has made interventions in popular public spaces, displaying some of his art works to be seen by all people without asking any permits and hence, in defiance of the regulations at his country.    <br/></p>
 Main Exhibitions <br/></p>
 2016. New Outsider Art from Cuba. Gallery C. Dubuque, USA.<br/></p>
-2015. 1srt Asuncion Biennial. Asunción, Paraguay.<br/></p>
+2015. 1srt Asuncion Biennial. Asunci&oacute;n, Paraguay.<br/></p>
 2015. Pictures in My Mind. Commenoz Gallery. Key Biscayne, USA.<br/></p>
 2015. 7 Seven. Outsider Cuban Artists. Ideobox Gallery. Miami, USA.<br/></p>
 2015. Outsider Art. Selections from the NAEMI Art Collection. Miami International Airport. Miami, USA.<br/></p>
@@ -78,6 +78,8 @@ Main Exhibitions <br/></p>
 2011. Heroes do not weigh. Teodoro Ramos Blanco Gallery. Havana, Cuba.<br/></p>
 2010. Clinging to the difference. Hostelry St. Miguel. Havana, Cuba.<br/></p>
 2009. The beginning. Origenes Gallery. Havana, Cuba.<br/></p>
+<br/></p>
+<br/></p>
 
 			</div>
 			</div>
