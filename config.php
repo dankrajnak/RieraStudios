@@ -1,10 +1,10 @@
 <?php
 
 //Define URL
-define("ROOT_PATH", "/");
-define("ROOT_URL", "http://localhost/Riera/");
+define("ROOT_PATH", "/Riera/");
+define("ROOT_URL", "http://localhost/");
 
 //Define assets I guess
-define("STANDARD_CSS", "/Riera/assets/css/stylesheet.css");
+define("STANDARD_CSS", "assets/css/stylesheet.css");
 
 ?>

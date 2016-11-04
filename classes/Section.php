@@ -110,12 +110,12 @@ abstract class Section{
 		
 		$directoryPath;
 		if(get_class($this)==="ArtbrutArtists"){
-			$directoryPath = "../Riera/views/artbrutartists/".$subsection;
+			$directoryPath = "..".ROOT_PATH."views/artbrutartists/".$subsection;
 			if(!file_exists($directoryPath))
 			mkdir($directoryPath, 0755, true);
 		}
 		else if (get_class($this)==="OutsiderArtArtists"){
-			$directoryPath = "../Riera/views/outsiderartartists/".$subsection;
+			$directoryPath = "..".ROOT_PATH."views/outsiderartartists/".$subsection;
 			if(!file_exists($directoryPath))
 			mkdir($directoryPath);
 		}
@@ -126,25 +126,25 @@ abstract class Section{
 		//--------- Find pictures, subtitles, and create slider -----------
 		//Find all pictures for this artist.
 		if(get_class($this)==="ArtbrutArtists"){
-		$pictures = $this->findPictures("../Riera/assets/artbrutassets/".$subsection);
+		$pictures = $this->findPictures("..".ROOT_PATH."assets/artbrutassets/".$subsection);
 		$pictures = $this->sortPictures($pictures);
 
 		//Get subtitles (captions) path
-		$subtitlesPath = $this->findSubtitles("../Riera/assets/artbrutassets/".$subsection);
+		$subtitlesPath = $this->findSubtitles("..".ROOT_PATH."assets/artbrutassets/".$subsection);
 		
 		//Get subtitles (captions)
-		$subtitles = $this->parseSubtitles($this->findSubtitles("../Riera/assets/artbrutassets/".$subsection));
+		$subtitles = $this->parseSubtitles($this->findSubtitles("..".ROOT_PATH."assets/artbrutassets/".$subsection));
 		}
 		// Outsider Artist
 		else{
-			$pictures = $this->findPictures("../Riera/assets/outsiderartassets/".$subsection);
+			$pictures = $this->findPictures("..".ROOT_PATH."assets/outsiderartassets/".$subsection);
 			$pictures = $this->sortPictures($pictures);
 
 			//Get subtitles (captions) path
-			$subtitlesPath = $this->findSubtitles("../Riera/assets/outsiderartassets/".$subsection);
+			$subtitlesPath = $this->findSubtitles("..".ROOT_PATH."assets/outsiderartassets/".$subsection);
 		
 			//Get subtitles (captions)
-			$subtitles = $this->parseSubtitles($this->findSubtitles("../Riera/assets/outsiderartassets/".$subsection));
+			$subtitles = $this->parseSubtitles($this->findSubtitles("..".ROOT_PATH."assets/outsiderartassets/".$subsection));
 		}
 		
 		$indexStream = fopen($directoryPath."/index.php", 'w+b');
@@ -177,7 +177,7 @@ abstract class Section{
 		<ul>");
 
 		fwrite($indexStream, "
-				<li id=\"backbutton\"><a href=\"/Riera/artbrutartists\"><span>&lt</span> Back</a></li>
+				<li id=\"backbutton\"><a href=\"".ROOT_PATH."artbrutartists\"><span>&lt</span> Back</a></li>
 				<li><img src=\"".substr($pictures['personal'], 2)."\" width=\"150\" height=\"150\" style=\"opacity: .8;\"></img></li>");
 		
 
@@ -185,9 +185,9 @@ abstract class Section{
 		//--------- Find and Write Bio -----------
 		//Find Bio
 		if(get_class($this)==="ArtbrutArtists")
-			$artistBio = $this->parseBio($this->findBio("../Riera/assets/artbrutassets/".$subsection));
+			$artistBio = $this->parseBio($this->findBio("..".ROOT_PATH."assets/artbrutassets/".$subsection));
 		else
-			$artistBio = $this->parseBio($this->findBio("../Riera/assets/outsiderartassets/".$subsection));
+			$artistBio = $this->parseBio($this->findBio("..".ROOT_PATH."assets/outsiderartassets/".$subsection));
 		$artistBioIndex = 0;
 	
 
