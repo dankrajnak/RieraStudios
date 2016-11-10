@@ -26,14 +26,13 @@ class Bootstrap{
 				return new $this->section($this->subsection, $this->id, $this->request);
 			} else{
 				//Base Section not extended
-				echo '<h1>Base Section not extended/h1>';
-				return;
+				$this->section = "FourOFour";
+				return new $this->section($this->subsection, $this->id, $this->request);
 			}
 		} else{
 			//Section Class does not exist
-			echo "<h1>Section class does not exist</h1>";
-			echo $this->section;
-			return new $this->section();
+			$this->section = "FourOFour";
+			return new $this->section($this->subsection, $this->id, $this->request);
 		}
 	
 	}

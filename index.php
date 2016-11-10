@@ -10,6 +10,7 @@ require('classes/Section.php');
 
 //Include sections
 require('sections/home.php');
+require('sections/fourofour.php');
 require('sections/about.php');
 require('sections/artbrut.php');
 require('sections/artbrutArtists.php');
