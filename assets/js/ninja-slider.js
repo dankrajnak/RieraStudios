@@ -14,7 +14,7 @@ var nsOptions =
     navigateByTap: true,
     keyboardNav: true,
     before: function (currentIdx, nextIdx, manual) { if (manual && typeof mcThumbnailSlider != "undefined") mcThumbnailSlider.display(nextIdx); },
-    license: "mylicense"
+    license: "b2i465"
 };
 
 var nslider = new NinjaSlider(nsOptions);
