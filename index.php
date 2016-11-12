@@ -13,7 +13,7 @@ require('sections/home.php');
 require('sections/fourofour.php');
 require('sections/about.php');
 require('sections/artbrut.php');
-require('sections/artbrutArtists.php');
+require('sections/artbrutartists.php');
 require('sections/outsiderartartists.php');
 require('sections/exhibitions.php');
 require('sections/press.php');

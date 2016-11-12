@@ -103,8 +103,21 @@ abstract class Section{
 		return $bio;
 	}
 	
-
-
+	private function findExhibitionInfo($workingDirectory){
+		$d = dir($workingDirectory);
+		$infoPath = "notfound";
+		while($infoPath === "notfound" && false !== ($entry = $d->read())){
+			if(is_dir($d->path.'/'.$entry) && strpos($entry, '.') !== 0){
+				$infoPath = $this->findExhibitionInfo($d->path.'/'.$entry);
+			}
+			
+			else if($infoPath === "notfound" && substr($entry, strpos($entry, '.')) === '.txt' 
+				&& false !== stripos($entry, 'info')){
+				$infoPath = $d->path.'/'.$entry;
+			}
+		}
+		return $infoPath;
+	}
 
 	protected function createArtistPage($subsection){
 		
@@ -147,6 +160,8 @@ abstract class Section{
 			$subtitles = $this->parseSubtitles($this->findSubtitles("..".ROOT_PATH."assets/outsiderartassets/".$subsection));
 		}
 		
+
+		//Begin Writing to index file.
 		$indexStream = fopen($directoryPath."/index.php", 'w+b');
 		
 		fwrite($indexStream, "<div class=\"section\" id=\"artistsection\">
@@ -176,6 +191,7 @@ abstract class Section{
 		<div class=\"sectionmenu\" id=\"artistsectionmenu\">
 		<ul>");
 
+		//Artist personal photo
 		fwrite($indexStream, "
 				<li id=\"backbutton\"><a href=\"".ROOT_PATH."artbrutartists\"><span>&lt</span> Back</a></li>
 				<li><img src=\"".substr($pictures['personal'], 2)."\" width=\"150\" height=\"150\" style=\"opacity: .8;\"></img></li>");
@@ -212,16 +228,17 @@ abstract class Section{
 			<p>");
 		while($artistBioIndex<count($artistBio) && strtolower($artistBio[$artistBioIndex]) !== "exhibitions"){
 		fwrite($indexStream, $artistBio[$artistBioIndex]);
-		fwrite($indexStream, "<br/></p>\n");
+		fwrite($indexStream, "<br/>\n");
 		$artistBioIndex++;
 		}
-		
+		fwrite($indexStream, "</p>\n");
+
 		//Test to see if there's an exhibition section
 		if($artistBioIndex < count($artistBio)){
 			//write exhibitions title and skip "exhibitions" element in array
 			$artistBioIndex++;
-			
 			fwrite($indexStream, "<span style=\"font-weight: bold\">Exhibitions</span>\n<ul>");
+
 			while($artistBioIndex<count($artistBio)){
 				fwrite($indexStream, '<li>'.$artistBio[$artistBioIndex]."</li>\n");
 				$artistBioIndex++;
@@ -236,6 +253,74 @@ abstract class Section{
 		fflush($indexStream);
 
 		fclose($indexStream);
+	}
+
+	protected function createExhibitionPage($subsection){
+		$directoryPath = "..".ROOT_PATH."views/exhibitions/".$subsection;
+		
+		if(!file_exists($directoryPath))
+			mkdir($directoryPath);
+		
+		//--------- Find pictures, subtitles, and create slider -----------
+		//Find all pictures for this exhibition
+		$pictures = $this->findPictures("..".ROOT_PATH."assets/exhibtions/".$subsection);
+		$pictures = $this->sortPictures($pictures);
+
+		//Get subtitles (captions) path 
+		//(for exhibitions, subtitles probably  won't exist, but check anyway)
+		$subtitlesPath = $this->findSubtitles("..".ROOT_PATH."assets/exhibitions/".$subsection);
+		
+		//Get subtitles (captions)
+		$subtitles = $this->parseSubtitles($this->findSubtitles("..".ROOT_PATH."assets/exhibitions/".$subsection));
+		
+
+		//--------- Find Exhibition info and parse info ---------------
+		//Find Info
+		$exhibitionInfo = $this->parseBio($this->findExhibitionInfo("..".ROOT_PATH."assets/exhibitions/".$subsection));
+		$exhibitionInfoIndex = 0;
+
+		//Get exhibition title and other info.
+		$exhibitionTitle = $exhibitionInfo[$exhibitionInfoIndex++];
+		
+
+
+
+
+		//Begin Writing to index file.
+		$indexStream = fopen($directoryPath."/index.php", 'w+b');
+		
+		fwrite($indexStream, "<div class=\"section\" id=\"exhibitionsection\">
+			<div style=\"margin-top: 40px\">
+			<div id=\"ninja-slider\">
+			<div>
+			<div class =\"slider-inner\">
+			<ul>\n");
+		
+		if(count($pictures)>0){
+			//-1 for the personal picture
+			for($i=1; $i<count($pictures); $i++){
+				fwrite($indexStream, "<li><a class=\"ns-img\" href=\"".substr($pictures[$i], 2)."\"></a>\n");
+				if(!is_null($subtitles[$i-1]))
+				fwrite($indexStream, "<span class = \"caption\">".$subtitles[$i-1]."</span>\n</li>\n");
+			}
+		}
+
+
+		fwrite($indexStream, "
+			</ul>
+			<div class=\"fs-icon\" title=\"Expand/Close\"></div>
+		</div>
+		</div>
+		</div>
+		</div>
+		<div class=\"sectionmenu\" id=\"exhibitionsectionmenu\">
+		<ul>");
+
+		fwrite($indexStream, "
+				<li id=\"backbutton\"><a href=\"".ROOT_PATH."exhibitions\"><span>&lt</span> Back</a></li>
+				<li><img src=\"".substr($pictures['personal'], 2)."\" width=\"150\" height=\"150\" style=\"opacity: .8;\"></img></li>");
+
+
 	}
 
 	protected function displayPage($fullview, $subsection, $id){
@@ -271,8 +356,12 @@ abstract class Section{
 			echo "\n<div class=\"bodycontent\">\n";
 			//if(!file_exists($view))
 			//{
-				if($subsection)
-			$this->createArtistPage($subsection);
+				if($subsection && get_class($this)=="Exhibitions"){
+				//	$this->createExhibitionPage($subsection);
+				}
+				else if($subsection){
+					$this->createArtistPage($subsection);
+				}
 			//}
 			
 			require($view);
