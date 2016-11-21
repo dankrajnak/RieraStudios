@@ -5,7 +5,7 @@
 	<title> Riera Studio - Havana, Cuba </title>
 	<script src="<?php echo ROOT_PATH ?>assets/js/libraries/p5.js" type="text/javascript"></script>
     <script src="<?php echo ROOT_PATH ?>assets/js/libraries/p5.dom.js" type="text/javascript"></script>
-    <script src="<?php echo ROOT_PATH ?>assets/js/Box.js" type="text/javascript"></script>
+    <script src="<?php echo ROOT_PATH ?>assets/js/box.js" type="text/javascript"></script>
 	</head>
 	
 	<body>

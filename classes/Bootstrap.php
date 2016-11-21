@@ -9,12 +9,13 @@ class Bootstrap{
 		$this->request = $request;
 		if($this->request['section'] == ""){
 			$this->section = 'home';
-		}
-		else{
+		}else{
 			$this->section = $this->request['section'];
+
 		}
 		$this->subsection = $request['subsection'];
 		$this->id = $request['id'];
+
 	}
 	
 	public function createSection(){

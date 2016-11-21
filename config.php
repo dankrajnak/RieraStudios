@@ -1,7 +1,7 @@
 <?php
 
 //Define URL
-define("ROOT_PATH", "/home/rierblpx/public_html/index.php");
+define("ROOT_PATH", "/");
 define("ROOT_URL", "http://rierastudioart.com");
 
 //Define assets I guess

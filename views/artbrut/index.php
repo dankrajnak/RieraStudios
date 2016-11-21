@@ -5,37 +5,37 @@
 	<div>
 		<div class ="slider-inner">
 			<ul>
-				<li><a class = "ns-img" href="/Riera/assets/images/artbrut/artbrut1.jpg"></a>
+				<li><a class = "ns-img" href="<?php echo ROOT_PATH ?>assets/images/artbrut/artbrut1.jpg"></a>
 				<span class="caption"> Identification and promotion of Cuban artists</span>
 				</li>
-				<li><a class = "ns-img" href="/Riera/assets/images/artbrut/artbrut2.jpg"></a>
+				<li><a class = "ns-img" href="<?php echo ROOT_PATH ?>assets/images/artbrut/artbrut2.jpg"></a>
 				<span class="caption"> Identification and promotion of Cuban artists</span>
 				</li>
-				<li><a class = "ns-img" href="/Riera/assets/images/artbrut/artbrut3.jpg"></a>
+				<li><a class = "ns-img" href="<?php echo ROOT_PATH ?>assets/images/artbrut/artbrut3.jpg"></a>
 				<span class="caption"> Identification and promotion of Cuban artists</span>
 				</li>
-				<li><a class = "ns-img" href="/Riera/assets/images/artbrut/artbrut4.jpg"></a>
+				<li><a class = "ns-img" href="<?php echo ROOT_PATH ?>assets/images/artbrut/artbrut4.jpg"></a>
 				<span class="caption"> Exhibitions</span>
 				</li>
-				<li><a class = "ns-img" href="/Riera/assets/images/artbrut/artbrut5.jpg"></a>
+				<li><a class = "ns-img" href="<?php echo ROOT_PATH ?>assets/images/artbrut/artbrut5.jpg"></a>
 				<span class="caption"> Exhibitions</span>
 				</li>
-				<li><a class = "ns-img" href="/Riera/assets/images/artbrut/artbrut6.jpg"></a>
+				<li><a class = "ns-img" href="<?php echo ROOT_PATH ?>assets/images/artbrut/artbrut6.jpg"></a>
 				<span class="caption"> Exhibitions</span>
 				</li>
-				<li><a class = "ns-img" href="/Riera/assets/images/artbrut/artbrut7.jpg"></a>
+				<li><a class = "ns-img" href="<?php echo ROOT_PATH ?>assets/images/artbrut/artbrut7.jpg"></a>
 				<span class="caption"> Workshops and residencies for artists</span>
 				</li>
-				<li><a class = "ns-img" href="/Riera/assets/images/artbrut/artbrut8.jpg"></a>
+				<li><a class = "ns-img" href="<?php echo ROOT_PATH ?>assets/images/artbrut/artbrut8.jpg"></a>
 				<span class="caption"> Workshops and residencies for artists</span>
 				</li>
-				<li><a class = "ns-img" href="/Riera/assets/images/artbrut/artbrut9.jpg"></a>
+				<li><a class = "ns-img" href="<?php echo ROOT_PATH ?>assets/images/artbrut/artbrut9.jpg"></a>
 				<span class="caption"> Workshops and residencies for artists</span>
 				</li>
-				<li><a class = "ns-img" href="/Riera/assets/images/artbrut/artbrut10.jpg"></a>
+				<li><a class = "ns-img" href="<?php echo ROOT_PATH ?>assets/images/artbrut/artbrut10.jpg"></a>
 				<span class="caption"> Reference center of Cuban Art Brut and Outsider Art</span>
 				</li>
-				<li><a class = "ns-img" href="/Riera/assets/images/artbrut/artbrut11.jpg"></a>
+				<li><a class = "ns-img" href="<?php echo ROOT_PATH ?>assets/images/artbrut/artbrut11.jpg"></a>
 				<span class="caption"> Opened to the community</span>
 				</li>
 			</ul>
@@ -44,17 +44,17 @@
 		<div id="thumbnail-slider">
 			<div class = "inner">
 				<ul>
-				<li><a class = "thumb" href="/Riera/assets/images/artbrut/artbrut1.jpg"></a></li>
-				<li><a class = "thumb" href="/Riera/assets/images/artbrut/artbrut2.jpg"></a></li>
-				<li><a class = "thumb" href="/Riera/assets/images/artbrut/artbrut3.jpg"></a></li>
-				<li><a class = "thumb" href="/Riera/assets/images/artbrut/artbrut4.jpg"></a></li>
-				<li><a class = "thumb" href="/Riera/assets/images/artbrut/artbrut5.jpg"></a></li>
-				<li><a class = "thumb" href="/Riera/assets/images/artbrut/artbrut6.jpg"></a></li>
-				<li><a class = "thumb" href="/Riera/assets/images/artbrut/artbrut7.jpg"></a></li>
-				<li><a class = "thumb" href="/Riera/assets/images/artbrut/artbrut8.jpg"></a></li>
-				<li><a class = "thumb" href="/Riera/assets/images/artbrut/artbrut9.jpg"></a></li>
-				<li><a class = "thumb" href="/Riera/assets/images/artbrut/artbrut10.jpg"></a></li>
-				<li><a class = "thumb" href="/Riera/assets/images/artbrut/artbrut11.jpg"></a></li>
+				<li><a class = "thumb" href="<?php echo ROOT_PATH ?>assets/images/artbrut/artbrut1.jpg"></a></li>
+				<li><a class = "thumb" href="<?php echo ROOT_PATH ?>assets/images/artbrut/artbrut2.jpg"></a></li>
+				<li><a class = "thumb" href="<?php echo ROOT_PATH ?>assets/images/artbrut/artbrut3.jpg"></a></li>
+				<li><a class = "thumb" href="<?php echo ROOT_PATH ?>assets/images/artbrut/artbrut4.jpg"></a></li>
+				<li><a class = "thumb" href="<?php echo ROOT_PATH ?>assets/images/artbrut/artbrut5.jpg"></a></li>
+				<li><a class = "thumb" href="<?php echo ROOT_PATH ?>assets/images/artbrut/artbrut6.jpg"></a></li>
+				<li><a class = "thumb" href="<?php echo ROOT_PATH ?>assets/images/artbrut/artbrut7.jpg"></a></li>
+				<li><a class = "thumb" href="<?php echo ROOT_PATH ?>assets/images/artbrut/artbrut8.jpg"></a></li>
+				<li><a class = "thumb" href="<?php echo ROOT_PATH ?>assets/images/artbrut/artbrut9.jpg"></a></li>
+				<li><a class = "thumb" href="<?php echo ROOT_PATH ?>assets/images/artbrut/artbrut10.jpg"></a></li>
+				<li><a class = "thumb" href="<?php echo ROOT_PATH ?>assets/images/artbrut/artbrut11.jpg"></a></li>
 				</ul>
 			</div>
 		</div>
@@ -64,8 +64,8 @@
 	
 	<div class="sectionmenu" id="artbrutsectionmenu">
 		<ul>
-			<li><a href="/Riera/artbrut/collaborators/">COLLABORATORS</a></li>
-			<li><a href="/Riera/artbrut/donations/">DONATIONS</a></li>
+			<li><a href="<?php echo ROOT_PATH ?>artbrut/collaborators/">COLLABORATORS</a></li>
+			<li><a href="<?php echo ROOT_PATH ?>artbrut/donations/">DONATIONS</a></li>
 		</ul>
 	</div>
 	<div class="sectiontext" id="artbrutsectiontext">

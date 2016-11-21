@@ -4,34 +4,34 @@
 	<div>
 		<div class ="slider-inner">
 			<ul>
-				<li><a class = "ns-img" href="/Riera/assets/images/about/about1.jpg"></a></li>
-				<li><a class = "ns-img" href="/Riera/assets/images/about/about2.jpg"></a></li>
-				<li><a class = "ns-img" href="/Riera/assets/images/about/about3.jpg"></a></li>
-				<li><a class = "ns-img" href="/Riera/assets/images/about/about4.jpg"></a></li>
-				<li><a class = "ns-img" href="/Riera/assets/images/about/about5.jpg"></a></li>
-				<li><a class = "ns-img" href="/Riera/assets/images/about/about6.jpg"></a></li>
-				<li><a class = "ns-img" href="/Riera/assets/images/about/about7.jpg"></a></li>
-				<li><a class = "ns-img" href="/Riera/assets/images/about/about8.jpg"></a></li>
-				<li><a class = "ns-img" href="/Riera/assets/images/about/about9.jpg"></a></li>
-				<li><a class = "ns-img" href="/Riera/assets/images/about/about10.jpg"></a></li>
-				<li><a class = "ns-img" href="/Riera/assets/images/about/about11.jpg"></a></li>
+				<li><a class = "ns-img" href="<?php echo ROOT_PATH ?>assets/images/about/about1.jpg"></a></li>
+				<li><a class = "ns-img" href="<?php echo ROOT_PATH ?>assets/images/about/about2.jpg"></a></li>
+				<li><a class = "ns-img" href="<?php echo ROOT_PATH ?>assets/images/about/about3.jpg"></a></li>
+				<li><a class = "ns-img" href="<?php echo ROOT_PATH ?>assets/images/about/about4.jpg"></a></li>
+				<li><a class = "ns-img" href="<?php echo ROOT_PATH ?>assets/images/about/about5.jpg"></a></li>
+				<li><a class = "ns-img" href="<?php echo ROOT_PATH ?>assets/images/about/about6.jpg"></a></li>
+				<li><a class = "ns-img" href="<?php echo ROOT_PATH ?>assets/images/about/about7.jpg"></a></li>
+				<li><a class = "ns-img" href="<?php echo ROOT_PATH ?>assets/images/about/about8.jpg"></a></li>
+				<li><a class = "ns-img" href="<?php echo ROOT_PATH ?>assets/images/about/about9.jpg"></a></li>
+				<li><a class = "ns-img" href="<?php echo ROOT_PATH ?>assets/images/about/about10.jpg"></a></li>
+				<li><a class = "ns-img" href="<?php echo ROOT_PATH ?>assets/images/about/about11.jpg"></a></li>
 			</ul>
 			<div class="fs-icon" title="Expand/Close"></div>
 		</div>
 		<div id="thumbnail-slider">
 			<div class = "inner">
 				<ul>
-					<li><a class = "thumb" href="/Riera/assets/images/about/about1.jpg"></a></li>
-					<li><a class="thumb" href="/Riera/assets/images/about/about2.jpg"></a></li>
-					<li><a class = "thumb" href="/Riera/assets/images/about/about3.jpg"></a></li>
-					<li><a class = "thumb" href="/Riera/assets/images/about/about4.jpg"></a></li>
-					<li><a class="thumb" href="/Riera/assets/images/about/about5.jpg"></a></li>
-					<li><a class = "thumb" href="/Riera/assets/images/about/about6.jpg"></a></li>
-					<li><a class = "thumb" href="/Riera/assets/images/about/about7.jpg"></a></li>
-					<li><a class="thumb" href="/Riera/assets/images/about/about8.jpg"></a></li>
-					<li><a class = "thumb" href="/Riera/assets/images/about/about9.jpg"></a></li>
-					<li><a class = "thumb" href="/Riera/assets/images/about/about10.jpg"></a></li>
-					<li><a class="thumb" href="/Riera/assets/images/about/about11.jpg"></a></li>
+					<li><a class = "thumb" href="<?php echo ROOT_PATH ?>assets/images/about/about1.jpg"></a></li>
+					<li><a class="thumb" href="<?php echo ROOT_PATH ?>assets/images/about/about2.jpg"></a></li>
+					<li><a class = "thumb" href="<?php echo ROOT_PATH ?>assets/images/about/about3.jpg"></a></li>
+					<li><a class = "thumb" href="<?php echo ROOT_PATH ?>assets/images/about/about4.jpg"></a></li>
+					<li><a class="thumb" href="<?php echo ROOT_PATH ?>assets/images/about/about5.jpg"></a></li>
+					<li><a class = "thumb" href="<?php echo ROOT_PATH ?>assets/images/about/about6.jpg"></a></li>
+					<li><a class = "thumb" href="<?php echo ROOT_PATH ?>assets/images/about/about7.jpg"></a></li>
+					<li><a class="thumb" href="<?php echo ROOT_PATH ?>assets/images/about/about8.jpg"></a></li>
+					<li><a class = "thumb" href="<?php echo ROOT_PATH ?>assets/images/about/about9.jpg"></a></li>
+					<li><a class = "thumb" href="<?php echo ROOT_PATH ?>assets/images/about/about10.jpg"></a></li>
+					<li><a class="thumb" href="<?php echo ROOT_PATH ?>assets/images/about/about11.jpg"></a></li>
 				</ul>
 			</div>
 		</div>

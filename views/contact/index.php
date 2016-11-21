@@ -6,7 +6,7 @@
 		<div class="sectionbody" id="contactsectionbody">
 			<ul>
 				<li>
-					<image id="contactsectionimage" src="/Riera/assets/images/contact/contactsamuel.jpg"></image>
+					<image id="contactsectionimage" src="<?php echo ROOT_PATH ?>assets/images/contact/contactsamuel.jpg"></image>
 					<div id=contactsectionbodytext>
 						<span id="contactsectionbodytitle">Samuel Riera Mendez</span>
 						<span id="contactsectionbodysubtitle">Director</span>
@@ -17,7 +17,7 @@
 					</div>
 				</li>
 				<li>
-					<image id="contactsectionimage" src="/Riera/assets/images/contact/contactderbis.jpg"></image>
+					<image id="contactsectionimage" src="<?php echo ROOT_PATH ?>assets/images/contact/contactderbis.jpg"></image>
 					<div id=contactsectionbodytext>
 						<span id="contactsectionbodytitle">Derbis Campos Hernandez </span>
 						<span id="contactsectionbodysubtitle">General Assistant and Photography</span>
@@ -27,7 +27,7 @@
 					</div>
 				</li>
 				<li>
-					<image id="contactsectionimage" src="/Riera/assets/images/contact/contactdaniel.jpg"></image>
+					<image id="contactsectionimage" src="<?php echo ROOT_PATH ?>assets/images/contact/contactdaniel.jpg"></image>
 					<div id=contactsectionbodytext>
 						<span id="contactsectionbodytitle">Daniel Krajnak </span>
 						<span id="contactsectionbodysubtitle">Web Designer</span>

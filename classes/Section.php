@@ -19,7 +19,7 @@ abstract class Section{
 				$pictures = array_merge($pictures, $this->findPictures($d->path.'/'.$entry));
 			}
 			else if(substr($entry, strpos($entry, '.')) === '.jpg'){
-				$pictures[] = $d->path.'/'.$entry;
+				$pictures[] = substr($d->path.'/'.$entry, 26);
 			}
 		}
 		return $pictures;
@@ -123,14 +123,15 @@ abstract class Section{
 		
 		$directoryPath;
 		if(get_class($this)==="ArtbrutArtists"){
-			$directoryPath = "..".ROOT_PATH."views/artbrutartists/".$subsection;
+			$directoryPath = dirname(__DIR__)."/views/artbrutartists/".$subsection;
 			if(!file_exists($directoryPath))
-			mkdir($directoryPath, 0755, true);
+			{}
+			//mkdir($directoryPath, 0755, true);
 		}
 		else if (get_class($this)==="OutsiderArtArtists"){
-			$directoryPath = "..".ROOT_PATH."views/outsiderartartists/".$subsection;
-			if(!file_exists($directoryPath))
-			mkdir($directoryPath);
+			$directoryPath = dirname(__DIR__)."/views/outsiderartartists/".$subsection;
+			if(!file_exists($directoryPath)){}
+			//mkdir($directoryPath);
 		}
 		else{
 			return;
@@ -139,26 +140,20 @@ abstract class Section{
 		//--------- Find pictures, subtitles, and create slider -----------
 		//Find all pictures for this artist.
 		if(get_class($this)==="ArtbrutArtists"){
-		$pictures = $this->findPictures("..".ROOT_PATH."assets/artbrutassets/".$subsection);
+			$assetPath = dirname(__DIR__)."/assets/artbrutassets/".$subsection;
+		}
+		else{
+			$assetPath = dirname(__DIR__)."/assets/outsiderartassets/".$subsection;
+		}
+		$pictures = $this->findPictures($assetPath);
 		$pictures = $this->sortPictures($pictures);
 
 		//Get subtitles (captions) path
-		$subtitlesPath = $this->findSubtitles("..".ROOT_PATH."assets/artbrutassets/".$subsection);
+		$subtitlesPath = $this->findSubtitles($assetPath);
 		
 		//Get subtitles (captions)
-		$subtitles = $this->parseSubtitles($this->findSubtitles("..".ROOT_PATH."assets/artbrutassets/".$subsection));
-		}
-		// Outsider Artist
-		else{
-			$pictures = $this->findPictures("..".ROOT_PATH."assets/outsiderartassets/".$subsection);
-			$pictures = $this->sortPictures($pictures);
+		$subtitles = $this->parseSubtitles($this->findSubtitles($assetPath));
 
-			//Get subtitles (captions) path
-			$subtitlesPath = $this->findSubtitles("..".ROOT_PATH."assets/outsiderartassets/".$subsection);
-		
-			//Get subtitles (captions)
-			$subtitles = $this->parseSubtitles($this->findSubtitles("..".ROOT_PATH."assets/outsiderartassets/".$subsection));
-		}
 		
 
 		//Begin Writing to index file.
@@ -174,7 +169,7 @@ abstract class Section{
 		if(count($pictures)>0){
 			//-1 for the personal picture
 			for($i=1; $i<count($pictures); $i++){
-				fwrite($indexStream, "<li><a class=\"ns-img\" href=\"".substr($pictures[$i], 2)."\"></a>\n");
+				fwrite($indexStream, "<li><a class=\"ns-img\" href=\"".$pictures[$i]."\"></a>\n");
 				if(!is_null($subtitles[$i-1]))
 				fwrite($indexStream, "<span class = \"caption\">".$subtitles[$i-1]."</span>\n</li>\n");
 			}
@@ -192,18 +187,21 @@ abstract class Section{
 		<ul>");
 
 		//Artist personal photo
-		fwrite($indexStream, "
-				<li id=\"backbutton\"><a href=\"".ROOT_PATH."artbrutartists\"><span>&lt</span> Back</a></li>
-				<li><img src=\"".substr($pictures['personal'], 2)."\" width=\"150\" height=\"150\" style=\"opacity: .8;\"></img></li>");
+		if(get_class($this)==="ArtbrutArtists"){
+			fwrite($indexStream, "
+				<li id=\"backbutton\"><a href=\"".ROOT_PATH."artbrutartists\"><span>&lt</span> Back</a></li>");
+		}else{
+			fwrite($indexStream, "
+				<li id=\"backbutton\"><a href=\"".ROOT_PATH."outsiderartartists\"><span>&lt</span> Back</a></li>");
+		}
+		fwrite($indexStream," <li><img src=\"".$pictures['personal']."\" width=\"150\" height=\"150\" style=\"opacity: .8;\"></img></li>");
 		
 
 
 		//--------- Find and Write Bio -----------
 		//Find Bio
-		if(get_class($this)==="ArtbrutArtists")
-			$artistBio = $this->parseBio($this->findBio("..".ROOT_PATH."assets/artbrutassets/".$subsection));
-		else
-			$artistBio = $this->parseBio($this->findBio("..".ROOT_PATH."assets/outsiderartassets/".$subsection));
+
+		$artistBio = $this->parseBio($this->findBio($assetPath));
 		$artistBioIndex = 0;
 	
 
@@ -281,7 +279,7 @@ abstract class Section{
 
 		//Get exhibition title and other info.
 		$exhibitionTitle = $exhibitionInfo[$exhibitionInfoIndex++];
-		
+
 
 
 
@@ -325,25 +323,25 @@ abstract class Section{
 
 	protected function displayPage($fullview, $subsection, $id){
 		if($subsection && $id){
-			$view = 'views/'.get_class($this).'/'.$subsection.'/'.$id.'.php';
+			$view = 'views/'.strtolower(get_class($this)).'/'.$subsection.'/'.$id.'.php';
 		}
 		else if($subsection){
-			if(file_exists('views/'.get_class($this).'/'.$subsection.'/index.php')){
-				$view = 'views/'.get_class($this).'/'.$subsection.'/index.php';
+			if(file_exists('views/'.strtolower(get_class($this)).'/'.$subsection.'/index.php')){
+				$view = 'views/'.strtolower(get_class($this)).'/'.$subsection.'/index.php';
 			}
 			else{
-				$view = 'views/'.get_class($this).'/'.$subsection.'.php';
+				$view = 'views/'.strtolower(get_class($this)).'/'.$subsection.'.php';
 			}
 		}
 		else{
-			$view = 'views/'.get_class($this).'/index.php';
+			$view = 'views/'.strtolower(get_class($this)).'/index.php';
 		}
 		if($fullview){
-			if($subsection && (get_class($this)==="ArtbrutArtists" || get_class($this)==="OutsiderArtArtists"  || get_class($this)==="Exhibitions") && file_exists('views/'.get_class($this).'/artistcustomheader.php')){
-				require('views/'.get_class($this).'/artistcustomheader.php');
+			if($subsection && (get_class($this)==="ArtbrutArtists" || get_class($this)==="OutsiderArtArtists"  || strtolower(get_class($this))==="Exhibitions") && file_exists('views/'.strtolower(get_class($this)).'/artistcustomheader.php')){
+				require('views/'.strtolower(get_class($this)).'/artistcustomheader.php');
 			}
-			else if(file_exists('views/'.get_class($this).'/'.$subsection.'customheader.php')){
-				require('views/'.get_class($this).'/'.$subsection.'customheader.php');
+			else if(file_exists('views/'.strtolower(get_class($this)).'/'.$subsection.'customheader.php')){
+				require('views/'.strtolower(get_class($this)).'/'.$subsection.'customheader.php');
 			}
 			else{
 				require('standardElements/standardHeader.php');
@@ -357,14 +355,18 @@ abstract class Section{
 			//if(!file_exists($view))
 			//{
 				if($subsection && get_class($this)=="Exhibitions"){
-				//	$this->createExhibitionPage($subsection);
+			//		$this->createExhibitionPage($subsection);
 				}
 				else if($subsection){
-					$this->createArtistPage($subsection);
+			//		$this->createArtistPage($subsection);
 				}
 			//}
-			
-			require($view);
+
+			if(file_exists($view)){
+				require($view);
+			}else{
+				require("views/fourofour/index.php");
+			}
 
 			echo "\n</div>\n";
 			echo "<div class=\"footer\">\n";
@@ -374,7 +376,11 @@ abstract class Section{
 			echo "</html>\n";
 		}
 		else{
-			require($view);
+			if(file_exists($view)){
+				require($view);
+			}else{
+				require("views/fourofour/index.php");
+			}
 		}
 	}
 }

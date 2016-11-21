@@ -4,28 +4,28 @@
         <div class="slider-inner">
             <ul>
                 <li>
-                    <a class="ns-img" href="/Riera/assets/images/donations/donations1.jpg"></a> 
+                    <a class="ns-img" href="<?php echo ROOT_PATH ?>assets/images/donations/donations1.jpg"></a> 
                 </li>
                 <li>
-                    <a class="ns-img" href="/Riera/assets/images/donations/donations2.jpg"></a>
+                    <a class="ns-img" href="<?php echo ROOT_PATH ?>assets/images/donations/donations2.jpg"></a>
                 </li>
                 <li>
-                    <a class="ns-img" href="/Riera/assets/images/donations/donations3.jpg"></a>
+                    <a class="ns-img" href="<?php echo ROOT_PATH ?>assets/images/donations/donations3.jpg"></a>
                 </li>
                 <li>
-                    <a class="ns-img" href="/Riera/assets/images/donations/donations4.jpg"></a>
+                    <a class="ns-img" href="<?php echo ROOT_PATH ?>assets/images/donations/donations4.jpg"></a>
                 </li>
                 <li>
-                    <a class="ns-img" href="/Riera/assets/images/donations/donations5.jpg"></a>
+                    <a class="ns-img" href="<?php echo ROOT_PATH ?>assets/images/donations/donations5.jpg"></a>
                 </li>
                 <li>
-                	<a class="ns-img" href="/Riera/assets/images/donations/donations6.jpg"></a>
+                	<a class="ns-img" href="<?php echo ROOT_PATH ?>assets/images/donations/donations6.jpg"></a>
                 </li>
                 <li>
-                	<a class="ns-img" href="/Riera/assets/images/donations/donations7.jpg"></a>
+                	<a class="ns-img" href="<?php echo ROOT_PATH ?>assets/images/donations/donations7.jpg"></a>
                 </li>
                 <li>
-                	<a class="ns-img" href="/Riera/assets/images/donations/donations8.jpg"></a>
+                	<a class="ns-img" href="<?php echo ROOT_PATH ?>assets/images/donations/donations8.jpg"></a>
                 </li>
             </ul>
             <div id="fsBtn" class="fs-icon" title="Expand/Close"></div>
@@ -35,20 +35,20 @@
 <div style="width: 100%; margin: 40px auto; background-color:#191919;"> 	
 	<div style="max-width:900px; margin: auto; padding-top: 40px;">
 		<div class="gallery">
-		    <img src="/Riera/assets/images/donations/donations1.jpg" onclick="lightbox(0)" style="width:auto; height:140px; cursor: pointer;"/>
-		    <img src="/Riera/assets/images/donations/donations2.jpg" onclick="lightbox(1)" style="width:auto; height:140px; cursor: pointer;"/>
-		    <img src="/Riera/assets/images/donations/donations3.jpg" onclick="lightbox(2)" style="width:auto; height:140px; cursor: pointer;"/>
-		    <img src="/Riera/assets/images/donations/donations4.jpg" onclick="lightbox(3)" style="width:auto; height:140px; cursor: pointer;"/>
-		    <img src="/Riera/assets/images/donations/donations5.jpg" onclick="lightbox(4)" style="width:auto; height:140px; cursor: pointer;"/>
-		    <img src="/Riera/assets/images/donations/donations6.jpg" onclick="lightbox(4)" style="width:auto; height:140px; cursor: pointer;"/>
-		    <img src="/Riera/assets/images/donations/donations7.jpg" onclick="lightbox(4)" style="width:auto; height:140px; cursor: pointer;"/>
-		    <img src="/Riera/assets/images/donations/donations8.jpg" onclick="lightbox(4)" style="width:auto; height:140px; cursor: pointer;"/>
+		    <img src="<?php echo ROOT_PATH ?>assets/images/donations/donations1.jpg" onclick="lightbox(0)" style="width:auto; height:140px; cursor: pointer;"/>
+		    <img src="<?php echo ROOT_PATH ?>assets/images/donations/donations2.jpg" onclick="lightbox(1)" style="width:auto; height:140px; cursor: pointer;"/>
+		    <img src="<?php echo ROOT_PATH ?>assets/images/donations/donations3.jpg" onclick="lightbox(2)" style="width:auto; height:140px; cursor: pointer;"/>
+		    <img src="<?php echo ROOT_PATH ?>assets/images/donations/donations4.jpg" onclick="lightbox(3)" style="width:auto; height:140px; cursor: pointer;"/>
+		    <img src="<?php echo ROOT_PATH ?>assets/images/donations/donations5.jpg" onclick="lightbox(4)" style="width:auto; height:140px; cursor: pointer;"/>
+		    <img src="<?php echo ROOT_PATH ?>assets/images/donations/donations6.jpg" onclick="lightbox(4)" style="width:auto; height:140px; cursor: pointer;"/>
+		    <img src="<?php echo ROOT_PATH ?>assets/images/donations/donations7.jpg" onclick="lightbox(4)" style="width:auto; height:140px; cursor: pointer;"/>
+		    <img src="<?php echo ROOT_PATH ?>assets/images/donations/donations8.jpg" onclick="lightbox(4)" style="width:auto; height:140px; cursor: pointer;"/>
 		</div>
 	</div>
 </div>
 <div class="sectionmenu" id="donationssectionmenu" style="margin-top: 40px">
 	<ul>
-		<li><a href="/Riera/artbrut/">ART BRUT PROJECT</a></li>
+		<li><a href="<?php echo ROOT_PATH ?>artbrut/">ART BRUT PROJECT</a></li>
 	</ul>
 </div>
 <div class="sectiontext" id="donationssectiontext" style="margin-top: 20px">
