@@ -19,7 +19,7 @@ abstract class Section{
 				$pictures = array_merge($pictures, $this->findPictures($d->path.'/'.$entry));
 			}
 			else if(substr($entry, strpos($entry, '.')) === '.jpg'){
-				$pictures[] = substr($d->path.'/'.$entry, 26);
+				$pictures[] = substr($d->path.'/'.$entry, stripos($d->path, ROOT_PATH."assets"));
 			}
 		}
 		return $pictures;
@@ -31,7 +31,7 @@ abstract class Section{
 			if(false !== stripos($picture, 'personal')){
 				$sortedPictures[personal] = $picture;
 			}
-			else if(false !== ($number = filter_var($picture, FILTER_SANITIZE_NUMBER_INT))){
+			else if(false !== ($number = filter_var(substr($picture, strripos($picture, "/")), FILTER_SANITIZE_NUMBER_INT))){
 				$sortedPictures[str_replace('-','', $number)] = $picture;
 			}
 		}
@@ -119,6 +119,9 @@ abstract class Section{
 		return $infoPath;
 	}
 
+	/*An artist page is pulled from a bio, slider pictures, subtitles, and a personal photo.
+	*The bio is structured artist name, DOB, biography, ["Exhibitions", list of exhibitions,] EOF
+	*/
 	protected function createArtistPage($subsection){
 		
 		$directoryPath;
@@ -169,7 +172,7 @@ abstract class Section{
 		if(count($pictures)>0){
 			//-1 for the personal picture
 			for($i=1; $i<count($pictures); $i++){
-				fwrite($indexStream, "<li><a class=\"ns-img\" href=\"".$pictures[$i]."\"></a>\n");
+				fwrite($indexStream, "<li><a class=\"ns-img\" href=\"".$pictures[$i]."\"></a></li>\n");
 				if(!is_null($subtitles[$i-1]))
 				fwrite($indexStream, "<span class = \"caption\">".$subtitles[$i-1]."</span>\n</li>\n");
 			}
@@ -252,41 +255,62 @@ abstract class Section{
 
 		fclose($indexStream);
 	}
-
+	/*An exhibition table is made from slider pictures, subtitles, and a bio text file
+	*the text file is sturctured exhibition name, dates, "Artists", list of artists, ["Words on Catalogue...", information about
+	*exhibition,] EOF
+	*/
 	protected function createExhibitionPage($subsection){
-		$directoryPath = "..".ROOT_PATH."views/exhibitions/".$subsection;
-		
+		$directoryPath = dirname(__DIR__)."/views/exhibitions/".$subsection;
+		$assetPath = dirname(__DIR__)."/assets/exhibitions/".$subsection;
 		if(!file_exists($directoryPath))
 			mkdir($directoryPath);
 		
 		//--------- Find pictures, subtitles, and create slider -----------
 		//Find all pictures for this exhibition
-		$pictures = $this->findPictures("..".ROOT_PATH."assets/exhibtions/".$subsection);
+		$pictures = $this->findPictures($assetPath);
 		$pictures = $this->sortPictures($pictures);
-
-		//Get subtitles (captions) path 
-		//(for exhibitions, subtitles probably  won't exist, but check anyway)
-		$subtitlesPath = $this->findSubtitles("..".ROOT_PATH."assets/exhibitions/".$subsection);
-		
-		//Get subtitles (captions)
-		$subtitles = $this->parseSubtitles($this->findSubtitles("..".ROOT_PATH."assets/exhibitions/".$subsection));
 		
 
 		//--------- Find Exhibition info and parse info ---------------
 		//Find Info
-		$exhibitionInfo = $this->parseBio($this->findExhibitionInfo("..".ROOT_PATH."assets/exhibitions/".$subsection));
+		$exhibitionInfo = $this->parseBio($this->findExhibitionInfo($assetPath));
 		$exhibitionInfoIndex = 0;
 
-		//Get exhibition title and other info.
+	
+		//Get exhibition title and date.
 		$exhibitionTitle = $exhibitionInfo[$exhibitionInfoIndex++];
+		$exhibitionDate = $exhibitionInfo[$exhibitionInfoIndex++];
 
+		//skip "Artist"
+		$exhibitionInfoIndex++;
+		
+		//Get all artists
+		$artistIndex = 0;
+		$artists = array();
+		while(false === stripos(strtolower($exhibitionInfo[$exhibitionInfoIndex]), 'words on catalogue') and $exhibitionInfoIndex <=count($exhibitionInfo)){
+			$artists[$artistIndex++] = $exhibitionInfo[$exhibitionInfoIndex++];
+		}
+		//Get words on catalogue line
+		$exhibitionWordsOnCatalogue = $exhibitionInfo[$exhibitionInfoIndex++];
+		
+		//Get exhibition text
+		$exhibitionText = array();
+		$exhibitionTextIndex = 0;
+		while($exhibitionInfoIndex < count($exhibitionInfo) and 0 !== stripos(strtolower($exhibitionInfo[$exhibitionInfoIndex]), '*'))
+			$exhibitionText[$exhibitionTextIndex++] = $exhibitionInfo[$exhibitionInfoIndex++];
 
+		//Get footnote if it exists
+		$footnote = false;
+		if($exhibitionInfoIndex != count($exhibitionInfo))
+			$footnote = $exhibitionInfo[$exhibitionInfoIndex];
 
+		//--------------------------------------------------------------
 
 
 		//Begin Writing to index file.
 		$indexStream = fopen($directoryPath."/index.php", 'w+b');
 		
+
 		fwrite($indexStream, "<div class=\"section\" id=\"exhibitionsection\">
 			<div style=\"margin-top: 40px\">
 			<div id=\"ninja-slider\">
@@ -295,11 +319,8 @@ abstract class Section{
 			<ul>\n");
 		
 		if(count($pictures)>0){
-			//-1 for the personal picture
-			for($i=1; $i<count($pictures); $i++){
-				fwrite($indexStream, "<li><a class=\"ns-img\" href=\"".substr($pictures[$i], 2)."\"></a>\n");
-				if(!is_null($subtitles[$i-1]))
-				fwrite($indexStream, "<span class = \"caption\">".$subtitles[$i-1]."</span>\n</li>\n");
+			for($i=1; $i<=count($pictures); $i++){
+				fwrite($indexStream, "<li><a class=\"ns-img\" href=\"".$pictures[$i]."\"></a></li>\n");
 			}
 		}
 
@@ -315,9 +336,100 @@ abstract class Section{
 		<ul>");
 
 		fwrite($indexStream, "
-				<li id=\"backbutton\"><a href=\"".ROOT_PATH."exhibitions\"><span>&lt</span> Back</a></li>
-				<li><img src=\"".substr($pictures['personal'], 2)."\" width=\"150\" height=\"150\" style=\"opacity: .8;\"></img></li>");
+				<li id=\"backbutton\"><a href=\"".ROOT_PATH."exhibitions\"><span>&lt</span> Back</a></li>\n");
+		fwrite($indexStream, "<li><strong style=\"color: #DE483F; font-size: 20px;\">Artists</strong></li>\n");
 
+		//Get all artists
+		$artBrutArtistDirectory = new DirectoryIterator(dirname(__DIR__)."/views/artbrutartists");
+		$allArtBrutArtists = array(); 
+		foreach($artBrutArtistDirectory as $element){
+			if($element->isDir())
+			array_push($allArtBrutArtists, $element->getBaseName());
+		}
+
+		$outsiderArtArtistDirectory = new DirectoryIterator(dirname(__DIR__)."/views/outsiderartartists");
+		$allOutsiderArtArtists = array();
+		foreach($outsiderArtArtistDirectory as $element){
+			if($element->isDir())
+			array_push($allArtBrutArtists, $element->getBaseName());
+		}
+
+		//Find the artist with the smallest levenshtein distance for every artist as the name of the artist listed in the
+		//exhibition can vary a little from the name of the artist in the artists section.  Weigh false positives and negatives
+		//approrpiately.   
+		foreach($artists as $artist){
+			//Format the artist to loook like the views
+			$temp = str_replace(' ','-', $artist);
+			$temp = str_replace('.','', $temp);
+			$temp = str_replace('&acute','', $temp);
+			$temp = strtolower($temp);
+			
+			$minDistance = levenshtein($temp, $allArtBrutArtists[0]);
+			$closestMatch = $allArtBrutArtists[0];
+
+			foreach($allArtBrutArtists as $artBrutArtist){
+				if($minDistance > levenshtein($temp, strtolower($artBrutArtist))){
+					$minDistance = levenshtein($temp, strtolower($artBrutArtist));
+					$closestMatch =  $artBrutArtist;
+				}
+			}
+
+			foreach($allOutsiderArtArtists as $outsiderArtArtist){
+				if($minDistance > levenshtein($temp, strtolower($outsiderartArtist))){
+					$minDistance = levenshtein($temp, strtolower($outsiderArtArtist));
+					$closestMatch =  $outsiderArtArtist;
+				}
+			}
+
+			
+			//See if this closest match is a good one and make a link if it is
+			if(($minDistance / (float) strlen($closestMatch)) <= .7){
+				if(file_exists(dirname(__DIR__)."/views/artbrutartists/".$closestMatch."/index.php")){
+					fwrite($indexStream, "<li><a href=\"".ROOT_PATH."artbrutartists/".$closestMatch."\"> ".$artist."</a></li>\n");
+				} 
+				elseif(file_exists(ROOT_PATH."views/outsiderartartists/".$closestMatch)){
+					fwrite($indexStream, "<li><a href=\"".ROOT_PATH."views/outsiderartartists/".$closestMatch."\"> ".$artist."</a></li>\n");
+				}
+			}
+			else{
+				fwrite($indexStream, "<li>".$artist."</li>\n");	
+			}
+		}
+		fwrite($indexStream, "</ul>\n");
+
+		//Title of Exhibition
+		fwrite($indexStream, "
+			</div>
+			<div class=\"sectiontext\" id=\"exhibitionsectiontext\">
+			<div class=\"sectiontitle\" id=\"exhibitionsectiontitle\">");
+		fwrite($indexStream, $exhibitionTitle."\n");
+
+		//Date of Exhibition
+		fwrite($indexStream, "
+			</div>
+		<div class=\"sectionsubtitle\" id=\"exhibitionsubtitle\">\n");
+		fwrite($indexStream, $exhibitionDate."\n</div>\n");
+
+		
+
+		//Exhibition text
+		fwrite($indexStream, "<div class=\"sectionbody\" id=\"exhibitionsectionbody\">\n");
+
+		fwrite($indexStream, "<span> ".$exhibitionWordsOnCatalogue."</span>\n");
+		foreach($exhibitionText as $paragraph)
+			fwrite($indexStream, "<p>".$paragraph."</p>\n");
+		
+		//Footnote
+		if($footnote){
+			fwrite($indexStream, "<span>".$footnote."</span>");
+		}
+
+		fwrite($indexStream, "
+			</div>
+			</div>
+			</div>");
+		fflush($indexStream);
+		fclose($indexStream);
 
 	}
 
@@ -337,7 +449,7 @@ abstract class Section{
 			$view = 'views/'.strtolower(get_class($this)).'/index.php';
 		}
 		if($fullview){
-			if($subsection && (get_class($this)==="ArtbrutArtists" || get_class($this)==="OutsiderArtArtists"  || strtolower(get_class($this))==="Exhibitions") && file_exists('views/'.strtolower(get_class($this)).'/artistcustomheader.php')){
+			if($subsection && (get_class($this)==="ArtbrutArtists" || get_class($this)==="OutsiderArtArtists"  || get_class($this)==="Exhibitions") && file_exists('views/'.strtolower(get_class($this)).'/artistcustomheader.php')){
 				require('views/'.strtolower(get_class($this)).'/artistcustomheader.php');
 			}
 			else if(file_exists('views/'.strtolower(get_class($this)).'/'.$subsection.'customheader.php')){
@@ -355,7 +467,7 @@ abstract class Section{
 			//if(!file_exists($view))
 			//{
 				if($subsection && get_class($this)=="Exhibitions"){
-			//		$this->createExhibitionPage($subsection);
+					$this->createExhibitionPage($subsection);
 				}
 				else if($subsection){
 			//		$this->createArtistPage($subsection);
