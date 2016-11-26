@@ -49,8 +49,7 @@
 		</div>
 		<div class="sectionmenu" id="artistsectionmenu">
 		<ul>
-				<li id="backbutton"><a href="/Riera/artbrutartists"><span>&lt</span> Back</a></li>
-				<li><img src="/Riera/assets/artbrutassets/Miguel-Ramon-Morales-Diaz/RamonPersonalPhoto.jpg" width="150" height="150" style="opacity: .8;"></img></li>
+				<li id="backbutton"><a href="javascript:history.back(1)"><span>&lt</span> Back</a></li> <li><img src="/Riera/assets/artbrutassets/Miguel-Ramon-Morales-Diaz/RamonPersonalPhoto.jpg" width="150" height="150" style="opacity: .8;"></img></li>
 			</ul>
 			</div>
 			<div class="sectiontext" id="artistsectiontext">
@@ -61,9 +60,10 @@
 
 			</div>
 			<div class="sectionbody" id="artistsectionbody">
-			<p>Ramon grew up in a humble family. He would had like to be a doctor but he could only finish 6th grade. His mother, a housekeeper, died and he had to start working to support his family. Over the years he became a carpenter and usually he used to work in construction sites. At that time, he began drawing on the streets and on abandoned walls during his free hours as a way to relax himself from hard work. Nowadays, Ramon has not changed his hobby as he continues drawing. He just loves to serve his community drawing on old walls like mural paintings. Some of these works have been lost forever due to the weather action and the conscious or unconscious actions of some people. One of his most significant work is a group of drawings on the facade and surrounding walls of a pharmacy near where he lives. These murals have been welcomed by the workers of the pharmacy and many other people of his neighborhood. Currently, Ramon spends much of his time on the streets, drawing and talking with his friends and neighbors. He quietly sits down on any place and draws with just a bunch of recycled papers, a piece of an old cardboard or just a piece of wood and some color pencils. He uses everyday scenes as motif, as well as the natural humor, jokes and slang of the people who surround him.<br/></p>
-<br/></p>
-<br/></p>
+			<p>Ramon grew up in a humble family. He would had like to be a doctor but he could only finish 6th grade. His mother, a housekeeper, died and he had to start working to support his family. Over the years he became a carpenter and usually he used to work in construction sites. At that time, he began drawing on the streets and on abandoned walls during his free hours as a way to relax himself from hard work. Nowadays, Ramon has not changed his hobby as he continues drawing. He just loves to serve his community drawing on old walls like mural paintings. Some of these works have been lost forever due to the weather action and the conscious or unconscious actions of some people. One of his most significant work is a group of drawings on the facade and surrounding walls of a pharmacy near where he lives. These murals have been welcomed by the workers of the pharmacy and many other people of his neighborhood. Currently, Ramon spends much of his time on the streets, drawing and talking with his friends and neighbors. He quietly sits down on any place and draws with just a bunch of recycled papers, a piece of an old cardboard or just a piece of wood and some color pencils. He uses everyday scenes as motif, as well as the natural humor, jokes and slang of the people who surround him.<br/>
+<br/>
+<br/>
+</p>
 
 			</div>
 			</div>

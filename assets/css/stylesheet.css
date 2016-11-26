@@ -1,5 +1,27 @@
+@font-face{
+	font-family: 'importedCalibri';
+	src: url('calibri.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'importedCalibri';
+	src: url('calibri-light.ttf') format('truetype');
+	font-weight: lighter;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'importedCalibri';
+	src: url('calibri-bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
 *{
-	font-family: calibri;
+	font-family: 'importedCalibri', sans-serif;
 }
 
 html,body{
@@ -716,6 +738,12 @@ canvas{
 #contactsectionbodyinfo{
 	display: block;
 	margin-top: 0px;
+}
+
+/*--------Mobile------------*/
+
+#mobileerrortext{
+	width:100% !important;
 }
 
 

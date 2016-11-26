@@ -4,55 +4,55 @@
 			<div>
 			<div class ="slider-inner">
 			<ul>
-<li><a class="ns-img" href="sets/artbrutassets/Carlos-J-Garcia-Huergo/slider/1.jpg"></a>
+<li><a class="ns-img" href="/Riera/assets/artbrutassets/Carlos-J-Garcia-Huergo/slider/1.jpg"></a>
 <span class = "caption">Crayon and pen on paper, 31.5 x 31 cm, 2013</span>
 </li>
-<li><a class="ns-img" href="sets/artbrutassets/Carlos-J-Garcia-Huergo/slider/2.jpg"></a>
+<li><a class="ns-img" href="/Riera/assets/artbrutassets/Carlos-J-Garcia-Huergo/slider/2.jpg"></a>
 <span class = "caption">Tempera and color pencil on cardboard, 50 x 45 cm, 2015</span>
 </li>
-<li><a class="ns-img" href="sets/artbrutassets/Carlos-J-Garcia-Huergo/slider/3.jpg"></a>
+<li><a class="ns-img" href="/Riera/assets/artbrutassets/Carlos-J-Garcia-Huergo/slider/3.jpg"></a>
 <span class = "caption">Pen and crayon on paper, 30.5 x 30 cm, 2013</span>
 </li>
-<li><a class="ns-img" href="sets/artbrutassets/Carlos-J-Garcia-Huergo/slider/4.jpg"></a>
+<li><a class="ns-img" href="/Riera/assets/artbrutassets/Carlos-J-Garcia-Huergo/slider/4.jpg"></a>
 <span class = "caption">Color pencil and crayon on cardboard, 60.5 x 46 cm, 2015</span>
 </li>
-<li><a class="ns-img" href="sets/artbrutassets/Carlos-J-Garcia-Huergo/slider/5.jpg"></a>
+<li><a class="ns-img" href="/Riera/assets/artbrutassets/Carlos-J-Garcia-Huergo/slider/5.jpg"></a>
 <span class = "caption">Tempera and color pencil on cardboard, 50 x 45 cm, 2015</span>
 </li>
-<li><a class="ns-img" href="sets/artbrutassets/Carlos-J-Garcia-Huergo/slider/6.jpg"></a>
+<li><a class="ns-img" href="/Riera/assets/artbrutassets/Carlos-J-Garcia-Huergo/slider/6.jpg"></a>
 <span class = "caption">Crayon, color pencil and pen on cardboard, 67 x 46, 2015</span>
 </li>
-<li><a class="ns-img" href="sets/artbrutassets/Carlos-J-Garcia-Huergo/slider/7.jpg"></a>
+<li><a class="ns-img" href="/Riera/assets/artbrutassets/Carlos-J-Garcia-Huergo/slider/7.jpg"></a>
 <span class = "caption">Pen and color pencil on cardboard, 31 x 31 cm, 2013</span>
 </li>
-<li><a class="ns-img" href="sets/artbrutassets/Carlos-J-Garcia-Huergo/slider/8.jpg"></a>
+<li><a class="ns-img" href="/Riera/assets/artbrutassets/Carlos-J-Garcia-Huergo/slider/8.jpg"></a>
 <span class = "caption">Crayon and pen on paper, 27.5 x 28.5 cm, 2013</span>
 </li>
-<li><a class="ns-img" href="sets/artbrutassets/Carlos-J-Garcia-Huergo/slider/9.jpg"></a>
+<li><a class="ns-img" href="/Riera/assets/artbrutassets/Carlos-J-Garcia-Huergo/slider/9.jpg"></a>
 <span class = "caption">Crayon and pen on cardboard, 31 x 31 cm, 2013</span>
 </li>
-<li><a class="ns-img" href="sets/artbrutassets/Carlos-J-Garcia-Huergo/slider/10.jpg"></a>
+<li><a class="ns-img" href="/Riera/assets/artbrutassets/Carlos-J-Garcia-Huergo/slider/10.jpg"></a>
 <span class = "caption"> Pen and color pencil on cardboard, 31 x 31 cm, 2013</span>
 </li>
-<li><a class="ns-img" href="sets/artbrutassets/Carlos-J-Garcia-Huergo/slider/11.jpg"></a>
+<li><a class="ns-img" href="/Riera/assets/artbrutassets/Carlos-J-Garcia-Huergo/slider/11.jpg"></a>
 <span class = "caption"> Crayon and pen on cardboard, 62 x 30.5 cm, 2012</span>
 </li>
-<li><a class="ns-img" href="sets/artbrutassets/Carlos-J-Garcia-Huergo/slider/12.jpg"></a>
+<li><a class="ns-img" href="/Riera/assets/artbrutassets/Carlos-J-Garcia-Huergo/slider/12.jpg"></a>
 <span class = "caption"> Crayon and pen on cardboard, 27 x 26.5 cm, 2013</span>
 </li>
-<li><a class="ns-img" href="sets/artbrutassets/Carlos-J-Garcia-Huergo/slider/13.jpg"></a>
+<li><a class="ns-img" href="/Riera/assets/artbrutassets/Carlos-J-Garcia-Huergo/slider/13.jpg"></a>
 <span class = "caption"></span>
 </li>
-<li><a class="ns-img" href="sets/artbrutassets/Carlos-J-Garcia-Huergo/slider/14.jpg"></a>
+<li><a class="ns-img" href="/Riera/assets/artbrutassets/Carlos-J-Garcia-Huergo/slider/14.jpg"></a>
 <span class = "caption"></span>
 </li>
-<li><a class="ns-img" href="sets/artbrutassets/Carlos-J-Garcia-Huergo/slider/15.jpg"></a>
+<li><a class="ns-img" href="/Riera/assets/artbrutassets/Carlos-J-Garcia-Huergo/slider/15.jpg"></a>
 <span class = "caption"></span>
 </li>
-<li><a class="ns-img" href="sets/artbrutassets/Carlos-J-Garcia-Huergo/slider/16.jpg"></a>
+<li><a class="ns-img" href="/Riera/assets/artbrutassets/Carlos-J-Garcia-Huergo/slider/16.jpg"></a>
 <span class = "caption"></span>
 </li>
-<li><a class="ns-img" href="sets/artbrutassets/Carlos-J-Garcia-Huergo/slider/17.jpg"></a>
+<li><a class="ns-img" href="/Riera/assets/artbrutassets/Carlos-J-Garcia-Huergo/slider/17.jpg"></a>
 <span class = "caption"></span>
 </li>
 
@@ -64,8 +64,7 @@
 		</div>
 		<div class="sectionmenu" id="artistsectionmenu">
 		<ul>
-				<li id="backbutton"><a href="/artbrutartists"><span>&lt</span> Back</a></li>
-				<li><img src="sets/artbrutassets/Carlos-J-Garcia-Huergo/personalphoto.jpg" width="150" height="150" style="opacity: .8;"></img></li>
+				<li id="backbutton"><a href="javascript:history.back(1)"><span>&lt</span> Back</a></li> <li><img src="/Riera/assets/artbrutassets/Carlos-J-Garcia-Huergo/personalphoto.jpg" width="150" height="150" style="opacity: .8;"></img></li>
 			</ul>
 			</div>
 			<div class="sectiontext" id="artistsectiontext">

@@ -49,8 +49,7 @@
 		</div>
 		<div class="sectionmenu" id="artistsectionmenu">
 		<ul>
-				<li id="backbutton"><a href="/Riera/artbrutartists"><span>&lt</span> Back</a></li>
-				<li><img src="/Riera/assets/artbrutassets/Boris-Adolfo-Martin-Santamaria/personalphoto.jpg" width="150" height="150" style="opacity: .8;"></img></li>
+				<li id="backbutton"><a href="javascript:history.back(1)"><span>&lt</span> Back</a></li> <li><img src="/Riera/assets/artbrutassets/Boris-Adolfo-Martin-Santamaria/personalphoto.jpg" width="150" height="150" style="opacity: .8;"></img></li>
 			</ul>
 			</div>
 			<div class="sectiontext" id="artistsectiontext">

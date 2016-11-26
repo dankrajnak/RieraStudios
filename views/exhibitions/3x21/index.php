@@ -24,7 +24,7 @@
 		</div>
 		<div class="sectionmenu" id="exhibitionsectionmenu">
 		<ul>
-				<li id="backbutton"><a href="/Riera/exhibitions"><span>&lt</span> Back</a></li>
+				<li id="backbutton"><a href="http://localhost/Riera/exhibitions/"><span>&lt</span> Back</a></li>
 <li><strong style="color: #DE483F; font-size: 20px;">Artists</strong></li>
 <li><a href="/Riera/artbrutartists/Lien-Agrelo-Pons"> Lien Agrelo Pons</a></li>
 <li><a href="/Riera/artbrutartists/Darien-Robaina-Alonso"> Darien Robaina Alonso</a></li>

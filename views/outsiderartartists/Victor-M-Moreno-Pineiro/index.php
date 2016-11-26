@@ -46,8 +46,7 @@
 		</div>
 		<div class="sectionmenu" id="artistsectionmenu">
 		<ul>
-				<li id="backbutton"><a href="/Riera/artbrutartists"><span>&lt</span> Back</a></li>
-				<li><img src="/Riera/assets/outsiderartassets/Victor-M-Moreno-Pineiro/VictorPersonalPhotoReduced.jpg" width="150" height="150" style="opacity: .8;"></img></li>
+				<li id="backbutton"><a href="javascript:history.back(1)"><span>&lt</span> Back</a></li> <li><img src="/Riera/assets/outsiderartassets/Victor-M-Moreno-Pineiro/VictorPersonalPhotoReduced.jpg" width="150" height="150" style="opacity: .8;"></img></li>
 			</ul>
 			</div>
 			<div class="sectiontext" id="artistsectiontext">
@@ -58,18 +57,19 @@
 
 			</div>
 			<div class="sectionbody" id="artistsectionbody">
-			<p>He was cousin of the known Cuban painter Servando Cabrera Moreno, although he never had the possibility to know him personally. Since he was a young man he was interested in painting and drawing and as a self-taught he began to develop his artistic work. He worked for a while as a signwriter and between 1980 and 2000, he participated in some collective exhibitions in small places of Havana. He was several times hospitalized at the Havana Psychiatric Hospital due to paranoid schizophrenia and depression, till he became a permanent patient for many years, until his death. During his institutionalization, he kept creating his paintings, mainly drawings; taking elements of his daily life as referent, like the faces of other patients around him and scenes of the hospital. So, part of his work is a life binnacle of the living conditions for this people. He also created a lot of paintings where abstraction is the central theme.<br/></p>
-Main Exhibitions <br/></p>
-2014. Echoes of the unconscious. Spain Embassy in Cuba. Havana, Cuba.<br/></p>
-2004. My Fragmented Delusions. Havana Psychiatric Hospital. Havana, Cuba.<br/></p>
-2001. The Being that I carry inside. Salvador Allende Memorial. Havana, Cuba.<br/></p>
-2000. Abstracts and Imaginations. The University Student Federation's House. Havana, Cuba.<br/></p>
-2000. From the Sea to the Legend. October 10 Gallery. Havana, Cuba. <br/></p>
-1984. Experiences. Guanabacoa Gallery. Havana, Cuba.<br/></p>
-<br/></p>
-<br/></p>
-<br/></p>
-
+			<p>He was cousin of the known Cuban painter Servando Cabrera Moreno, although he never had the possibility to know him personally. Since he was a young man he was interested in painting and drawing and as a self-taught he began to develop his artistic work. He worked for a while as a signwriter and between 1980 and 2000, he participated in some collective exhibitions in small places of Havana. He was several times hospitalized at the Havana Psychiatric Hospital due to paranoid schizophrenia and depression, till he became a permanent patient for many years, until his death. During his institutionalization, he kept creating his paintings, mainly drawings; taking elements of his daily life as referent, like the faces of other patients around him and scenes of the hospital. So, part of his work is a life binnacle of the living conditions for this people. He also created a lot of paintings where abstraction is the central theme.<br/>
+</p>
+<span style="font-weight: bold">Exhibitions</span>
+<ul><li>2014. Echoes of the unconscious. Spain Embassy in Cuba. Havana, Cuba.</li>
+<li>2004. My Fragmented Delusions. Havana Psychiatric Hospital. Havana, Cuba.</li>
+<li>2001. The Being that I carry inside. Salvador Allende Memorial. Havana, Cuba.</li>
+<li>2000. Abstracts and Imaginations. The University Student Federation's House. Havana, Cuba.</li>
+<li>2000. From the Sea to the Legend. October 10 Gallery. Havana, Cuba. </li>
+<li>1984. Experiences. Guanabacoa Gallery. Havana, Cuba.</li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
 			</div>
 			</div>
 			</div>

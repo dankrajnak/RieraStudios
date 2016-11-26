@@ -8,6 +8,7 @@ require('config.php');
 require('classes/Bootstrap.php');
 require('classes/Section.php');
 
+
 //Include sections
 require('sections/home.php');
 require('sections/fourofour.php');
@@ -18,6 +19,7 @@ require('sections/outsiderartartists.php');
 require('sections/exhibitions.php');
 require('sections/press.php');
 require('sections/contact.php');
+require('sections/mobile.php');
 
 
 

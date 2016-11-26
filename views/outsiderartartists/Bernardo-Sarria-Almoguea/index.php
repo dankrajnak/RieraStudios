@@ -49,8 +49,7 @@
 		</div>
 		<div class="sectionmenu" id="artistsectionmenu">
 		<ul>
-				<li id="backbutton"><a href="/Riera/artbrutartists"><span>&lt</span> Back</a></li>
-				<li><img src="/Riera/assets/outsiderartassets/Bernardo-Sarria-Almoguea/BernardoPersonalPhoto.jpg" width="150" height="150" style="opacity: .8;"></img></li>
+				<li id="backbutton"><a href="javascript:history.back(1)"><span>&lt</span> Back</a></li> <li><img src="/Riera/assets/outsiderartassets/Bernardo-Sarria-Almoguea/BernardoPersonalPhoto.jpg" width="150" height="150" style="opacity: .8;"></img></li>
 			</ul>
 			</div>
 			<div class="sectiontext" id="artistsectiontext">
@@ -61,7 +60,8 @@
 
 			</div>
 			<div class="sectionbody" id="artistsectionbody">
-			<p>When Bernardo was a child he was very hyperactive, so his mother motivated him to draw as a method to make him focus in only one particular task. He finished technical drawing studies to design industrial machinery pieces. However, he never applied for this kind of job; instead of it, he began working as an operator for heavy machinery which provided him with a higher salary. Over the years he took over different jobs: sign-painter, manager of decoration stores, cinema projectionist and manager for grocery stores. In the meantime, he never abandoned his interest for drawing, creating his works during his free time. His graphic artwork reflects a myriad of quirky and melted characters based on social and religious topics. He also began making sculptures using dissimilar materials; most of them used and discarded old objects he melts down into amorphous structures.<br/></p>
+			<p>When Bernardo was a child he was very hyperactive, so his mother motivated him to draw as a method to make him focus in only one particular task. He finished technical drawing studies to design industrial machinery pieces. However, he never applied for this kind of job; instead of it, he began working as an operator for heavy machinery which provided him with a higher salary. Over the years he took over different jobs: sign-painter, manager of decoration stores, cinema projectionist and manager for grocery stores. In the meantime, he never abandoned his interest for drawing, creating his works during his free time. His graphic artwork reflects a myriad of quirky and melted characters based on social and religious topics. He also began making sculptures using dissimilar materials; most of them used and discarded old objects he melts down into amorphous structures.<br/>
+</p>
 <span style="font-weight: bold">Exhibitions</span>
 <ul><li>2015. Brujeria we love you. Espacio Aglutinador. Havana, Cuba.</li>
 <li>2015. Witches but also Warlocks. Espacio Aglutinador. Havana, Cuba.</li>

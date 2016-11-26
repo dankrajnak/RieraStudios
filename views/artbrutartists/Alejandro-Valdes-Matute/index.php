@@ -49,8 +49,7 @@
 		</div>
 		<div class="sectionmenu" id="artistsectionmenu">
 		<ul>
-				<li id="backbutton"><a href="/Riera/artbrutartists"><span>&lt</span> Back</a></li>
-				<li><img src="/Riera/assets/artbrutassets/Alejandro-Valdes-Matute/personalphoto.jpg" width="150" height="150" style="opacity: .8;"></img></li>
+				<li id="backbutton"><a href="javascript:history.back(1)"><span>&lt</span> Back</a></li> <li><img src="/Riera/assets/artbrutassets/Alejandro-Valdes-Matute/personalphoto.jpg" width="150" height="150" style="opacity: .8;"></img></li>
 			</ul>
 			</div>
 			<div class="sectiontext" id="artistsectiontext">
@@ -61,18 +60,19 @@
 
 			</div>
 			<div class="sectionbody" id="artistsectionbody">
-			<p>He was born when his mother was six and a half month of pregnancy so he had fetal suffering with brain and breathing complications at birth. Later in life, his psychomotor development was delayed. When he was five years old he started in a school for children with special needs. When he was seven years old and after a multidisciplinary medical analysis he was diagnosed with Atypical Autistic Syndrome, according to his assimilation of knowledge, memory and socialization. About his skills in art, he started to draw since he was five, almost daily, and it is a habit he still has nowadays. Alejandro was very inspired by readings and TV shows. Also he learned to play the piano by ear. His works is about his own interpretation of the advertisements and distinctive sings of brands of different products.<br/></p>
-<br/></p>
-<br/></p>
-<br/></p>
-<br/></p>
-   <br/></p>
-<br/></p>
-<br/></p>
-<br/></p>
-<br/></p>
-<br/></p>
-<br/></p>
+			<p>He was born when his mother was six and a half month of pregnancy so he had fetal suffering with brain and breathing complications at birth. Later in life, his psychomotor development was delayed. When he was five years old he started in a school for children with special needs. When he was seven years old and after a multidisciplinary medical analysis he was diagnosed with Atypical Autistic Syndrome, according to his assimilation of knowledge, memory and socialization. About his skills in art, he started to draw since he was five, almost daily, and it is a habit he still has nowadays. Alejandro was very inspired by readings and TV shows. Also he learned to play the piano by ear. His works is about his own interpretation of the advertisements and distinctive sings of brands of different products.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+   <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</p>
 
 			</div>
 			</div>

@@ -49,8 +49,7 @@
 		</div>
 		<div class="sectionmenu" id="artistsectionmenu">
 		<ul>
-				<li id="backbutton"><a href="/Riera/artbrutartists"><span>&lt</span> Back</a></li>
-				<li><img src="/Riera/assets/artbrutassets/Hector-Gonzales-Herrero/HectorPersonalPhotoReduced.jpg" width="150" height="150" style="opacity: .8;"></img></li>
+				<li id="backbutton"><a href="javascript:history.back(1)"><span>&lt</span> Back</a></li> <li><img src="/Riera/assets/artbrutassets/Hector-Gonzales-Herrero/HectorPersonalPhotoReduced.jpg" width="150" height="150" style="opacity: .8;"></img></li>
 			</ul>
 			</div>
 			<div class="sectiontext" id="artistsectiontext">
@@ -61,7 +60,8 @@
 
 			</div>
 			<div class="sectionbody" id="artistsectionbody">
-			<p>He finished his studies of technician in telecommunications, but he never worked as one, or as anything else because of his illness. Since childhood he started to present psych-emotional crisis and he was diagnosed with schizophrenia with extra-pyramidal reactions. Though he kept taking his medications with the established frequency, he suffered from frequent crisis, so he had to be admitted in health institutions several times. His family supported him and took care of him. The only work he recognized as his vocation is painting, which he has been doing since he was a kid, and with no artistic training. He uses different techniques and materials to make possible to empty his inner world into the drawings. A frequent theme in his present work is religion, where he represents himself as silhouettes in cloudy areas and using his own symbols, allegories and phrases with religious meaning.<br/></p>
+			<p>He finished his studies of technician in telecommunications, but he never worked as one, or as anything else because of his illness. Since childhood he started to present psych-emotional crisis and he was diagnosed with schizophrenia with extra-pyramidal reactions. Though he kept taking his medications with the established frequency, he suffered from frequent crisis, so he had to be admitted in health institutions several times. His family supported him and took care of him. The only work he recognized as his vocation is painting, which he has been doing since he was a kid, and with no artistic training. He uses different techniques and materials to make possible to empty his inner world into the drawings. A frequent theme in his present work is religion, where he represents himself as silhouettes in cloudy areas and using his own symbols, allegories and phrases with religious meaning.<br/>
+</p>
 <span style="font-weight: bold">Exhibitions</span>
 <ul><li>1999. Son of God. Espacio Aglutinador. Havana, Cuba.</li>
 <li></li>

@@ -172,7 +172,7 @@ abstract class Section{
 		if(count($pictures)>0){
 			//-1 for the personal picture
 			for($i=1; $i<count($pictures); $i++){
-				fwrite($indexStream, "<li><a class=\"ns-img\" href=\"".$pictures[$i]."\"></a></li>\n");
+				fwrite($indexStream, "<li><a class=\"ns-img\" href=\"".$pictures[$i]."\"></a>\n");
 				if(!is_null($subtitles[$i-1]))
 				fwrite($indexStream, "<span class = \"caption\">".$subtitles[$i-1]."</span>\n</li>\n");
 			}
@@ -190,13 +190,8 @@ abstract class Section{
 		<ul>");
 
 		//Artist personal photo
-		if(get_class($this)==="ArtbrutArtists"){
-			fwrite($indexStream, "
-				<li id=\"backbutton\"><a href=\"".ROOT_PATH."artbrutartists\"><span>&lt</span> Back</a></li>");
-		}else{
-			fwrite($indexStream, "
-				<li id=\"backbutton\"><a href=\"".ROOT_PATH."outsiderartartists\"><span>&lt</span> Back</a></li>");
-		}
+		fwrite($indexStream, "
+				<li id=\"backbutton\"><a href=\"javascript:history.back(1)\"><span>&lt</span> Back</a></li>");
 		fwrite($indexStream," <li><img src=\"".$pictures['personal']."\" width=\"150\" height=\"150\" style=\"opacity: .8;\"></img></li>");
 		
 
@@ -336,7 +331,7 @@ abstract class Section{
 		<ul>");
 
 		fwrite($indexStream, "
-				<li id=\"backbutton\"><a href=\"".ROOT_PATH."exhibitions\"><span>&lt</span> Back</a></li>\n");
+				<li id=\"backbutton\"><a href=\"".$_SERVER['HTTP_REFERER']."\"><span>&lt</span> Back</a></li>\n");
 		fwrite($indexStream, "<li><strong style=\"color: #DE483F; font-size: 20px;\">Artists</strong></li>\n");
 
 		//Get all artists
@@ -467,7 +462,7 @@ abstract class Section{
 			//if(!file_exists($view))
 			//{
 				if($subsection && get_class($this)=="Exhibitions"){
-					$this->createExhibitionPage($subsection);
+			//		$this->createExhibitionPage($subsection);
 				}
 				else if($subsection){
 			//		$this->createArtistPage($subsection);

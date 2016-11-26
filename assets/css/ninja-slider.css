@@ -120,24 +120,26 @@
 #ninja-slider .caption {
     display: block;
     position: relative;
-    font-family: calibri;
-    font-weight: bold;
+    font-family: 'importedCalibri';
+    font-weight: normal;
     top: 330px;
     padding-bottom: 5px;
     background-color: rgba(0,0,0, .6);
     margin: auto;
     max-width: 50%;
-    text-align:center;
+    text-align: center;
     font-size:14px;
     color:#ccc;    
 }
 
 #ninja-slider.fullscreen .caption{
-    top: 90%;
+    display: none;
+    /*top: 95%;
+    vertical-align: center;
     text-align: center;
     background: rgba(0,0,0, .6);
     min-width: 30%;
-    padding: 10px 0;
+    padding: 0px 0;*/
 
 
 }
