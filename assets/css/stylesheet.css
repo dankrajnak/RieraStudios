@@ -106,7 +106,6 @@ html,body{
 	}
 
 
-
 	#nav-dropdown-button {
 		background-color: transparent !important;
 	}
@@ -120,40 +119,104 @@ html,body{
 	}
 }
 
-/*-----Dropdown menu stuff-----*/
-.dropdown{
+/*-----Riera Studio title on home page-----*/
+.header{
+	top: 10%;
+	position: fixed;
+	width: 100%;
+	margin: auto;
+	z-index: 2;
+	text-align: center;
+	cursor: pointer;
+}
+
+#title{
+	color: black;
+	font-weight: lighter;
+	margin: auto;
+	padding: 0pt;
+
+	font-size: 48pt;
+}
+
+#subtitle {
+	color: black;
 	position: relative;
-	display: inline-block;
+	bottom: 12pt;
+	font-weight: lighter;
+	margin-top: 0pt;
+	text-align: center;
+	font-size: 18pt;    
 }
 
-.dropdown-content{
-	display: none;
-	left: 0px;
-	margin-top: none;
-	position: absolute;
-	min-width: 140px;
-	
-}
-
-.dropdownimage{
-	vertical-align: center;
-	position: relative;
-	bottom: 1pt;
-	display: none
-}
-
-.dropdown-content a{
+.click {
+	font-size: 40px;
+	cursor: pointer;
+	position: fixed;
 	display: block;
+	top: 80%;
+	left: 50%;
+	text-align: center;
+	width: 50px;
+	margin-left: -60px;
+	z-index: 5;
+	color: rgba(0,0,0, .2);
 }
 
-.dropdown:hover .dropdown-content{
-	display: block;
+/*-----Menu on home page-----*/
+
+
+@media(min-width: 768){
+
+	#mainmenu{
+		max-width: 560px;
+		height: fill;
+		left: 10%;
+		position: fixed;
+		z-index: 3;
+		top: 30%;
+		background: rgba(255,255,255, .8);
+		cursor: default;
+	}
+
+	.header{
+		display: block !important;
+	}
+	#mainmenu #menu-title{
+		display: none;
+	}
+	#mainmenu .navbar-nav li a:hover{
+			color: black !important;
+	}
+
+	#mainmenu .dropdown-menu li a:hover{
+		color: white !important;
+		background-color: rgba(0,0,0,.7) !important;
+
+}
+/*Dropdown*/
+
+#main-dropdown-content{
+	font-weight: lighter;
 }
 
-.dropdown:hover .dropdownimage{
-	display: inline-block;
+#main-dropdown-content a{
+	color: black;
+	text-align: left;
+	padding: 6px 6px 6px 6px;
+	margin-top: 12px;
+	text-decoration: none;
 }
 
+#main-dropdown-content a:hover{
+	text-decoration: none;
+	color: white;
+	background-color: #DE483F;
+}
+
+#main-dropdown:hover{
+	color: #DE483F;
+}
 
 
 /*-----Body Content-----*/
@@ -205,112 +268,6 @@ footer li {
 
 
 
-/*-----Riera Studio title on home page-----*/
-.header{
-	top: 10%;
-	position: fixed;
-	width: 100%;
-	margin: auto;
-	z-index: 2;
-	text-align: center;
-	cursor: pointer;
-}
-
-#title{
-	color: black;
-	font-weight: lighter;
-	margin: auto;
-	padding: 0pt;
-
-	font-size: 48pt;
-}
-
-#subtitle {
-	color: black;
-	position: relative;
-	bottom: 12pt;
-	font-weight: lighter;
-	margin-top: 0pt;
-	text-align: center;
-	font-size: 18pt;    
-}
-
-.click {
-	font-size: 40px;
-	cursor: pointer;
-	position: fixed;
-	display: block;
-	top: 80%;
-	left: 50%;
-	text-align: center;
-	width: 50px;
-	margin-left: -60px;
-	z-index: 5;
-	color: rgba(0,0,0, .2);
-}
-
-/*-----Menu on home page-----*/
-#mainmenu{
-	width: 90%;
-	height: fill;
-	left: 5%;
-	position: fixed;
-	z-index: 3;
-	top: 30%;
-	cursor:default;
-	
-}
-
-
-#mainmenuitems{
-	position: relative;
-	left: -9999pt;
-}
-
-#mainmenuitems>li{
-	color: black;
-	font-weight: bold;
-	display: inline;
-	position: relative;
-	margin-left: 30pt;
-
-}
-
-#mainmenuitems>li>a{
-	text-decoration: none;
-	color: black;
-	padding: 1px 3px 1px 3px;
-
-}
-
-#mainmenuitems>li>a:hover{
-	color: white;
-	background-color: #DE483F;
-}
-
-/*Dropdown*/
-
-#main-dropdown-content{
-	font-weight: lighter;
-}
-
-#main-dropdown-content a{
-	color: black;
-	text-align: left;
-	padding: 6px 6px 6px 6px;
-	margin-top: 12px;
-	text-decoration: none;
-}
-
-#main-dropdown-content a:hover{
-	text-decoration: none;
-	color: white;
-	background-color: #DE483F;
-}
-
-#main-dropdown:hover{
-	color: #DE483F;
-}
 
 /*-----p5.js Canvas-----*/
 canvas{
@@ -734,6 +691,10 @@ canvas{
 	width:100% !important;
 }
 
+
+.hide{
+	display: none;
+}
 
 /*----Animations---*/
 /*Designed by Daniel Eden. http://daneden.me/animate*/

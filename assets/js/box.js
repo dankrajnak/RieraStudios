@@ -52,10 +52,11 @@ function draw(){
 		var header = select('.header');
 		var title = select('#title');
 		var subtitle = select('#subtitle');
-		var mainmenuitems = select('#mainmenuitems');
+		var menu = select('#mainmenu');
 		title.position(20, 20);
 		subtitle.position(24, 80);
-		mainmenuitems.position(0, 0);
+		header.addClass('hide');
+		menu.removeClass('hide');
 		
 	}
 	else{
