@@ -122,25 +122,25 @@
 	window.addEventListener("resize", function(){
 	if(window.innerWidth>980){
 		for(var i=0; i<pictures.length; i++){
-			pictures[i].setAttribute("height", window.innerWidth*.27);
-			pictures[i].setAttribute("width", window.innerWidth*.27);	
+			pictures[i].setAttribute("height", window.innerWidth*.27."px");
+			pictures[i].setAttribute("width", window.innerWidth*.27."px");	
 		}
 		for(var i=0; i<tds.length; i++){
-			tds[i].setAttribute("height", window.innerWidth*.27+30);
-			tds[i].setAttribute("width", window.innerWidth*.27+30);
+			tds[i].setAttribute("height", window.innerWidth*.27+30."px");
+			tds[i].setAttribute("width", window.innerWidth*.27+30."px");
 		}
 
 
 	}
 	else{
 		for(var i=0; i<pictures.length; i++){
-			pictures[i].setAttribute("height", 980*.27);
-			pictures[i].setAttribute("width", 980*.27);	
+			pictures[i].setAttribute("height", 980*.27."px");
+			pictures[i].setAttribute("width", 980*.27."px");	
 
 		}
 		for(var i=0; i<tds.length; i++){
-			tds[i].setAttribute("height", 980*.27+30);
-			tds[i].setAttribute("width", 980*.27+30);
+			tds[i].setAttribute("height", 980*.27+30."px");
+			tds[i].setAttribute("width", 980*.27+30."px");
 		}
 
 

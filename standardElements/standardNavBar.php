@@ -10,7 +10,7 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class= "nav navbar-nav">
 				<li class="dropdown">
-          			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ABOUT US
+          			<a href="#" id="nav-dropdown-button" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ABOUT US
           			</a>
 					<ul class = "dropdown-menu">
 						<li><a href="<?php echo ROOT_PATH ?>/about/">OUR STUDIO</a></li>
@@ -18,7 +18,7 @@
 					</ul>
 				</li>
 				<li class = "dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ARTISTS</a>
+					<a href="#" id="nav-dropdown-button" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ARTISTS</a>
 					<ul class = "dropdown-menu">
 						<li><a href="<?php echo ROOT_PATH ?>artbrutartists/">ART BRUT</a></li>
 						<li><a href="<?php echo ROOT_PATH ?>outsiderartartists/">OUTSIDER ART</a></li>
