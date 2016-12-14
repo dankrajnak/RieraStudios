@@ -28,14 +28,13 @@ html,body{
 	height:100%;
 	width: 100%;
 	left: 0;
-	min-width: 1060px;
 	margin: auto;
 }
 
-/*-----Navigation Menu-----*/
+/*-----Navigation Menu-----
 
 .menu{
-	min-width: 1080px;
+
 	height: 40px;
 	background-color: rgba(0, 0, 0, .9);
 	background-blend-mode: hard-light;
@@ -45,7 +44,7 @@ html,body{
 	margin: auto;
   	position: fixed;
 	z-index: 800000;
-	/*box-shadow: 0px 8px 5px 2px rgba(0,0,0, .5);*/
+	/*box-shadow: 0px 8px 5px 2px rgba(0,0,0, .5);
 }
 
 .navbarscroll{
@@ -102,31 +101,30 @@ html,body{
 
 }
 
-#nav-dropdown{
+.nav-dropdown{
 	cursor: default;
-	padding-bottom: 7pt;
+	padding-bottom: 7px;
 
 }
 
-#nav-dropdown-content{
+.nav-dropdown-content{
 	margin-top: 7px;
-	min-width: 160px;
 	background-color: rgba(255,255,255, .95);
 }
 
-#nav-dropdown-content a{
+.nav-dropdown-content a{
 	color: black;
 	padding: 10px 5px 10px 5px;
 }
 
-#nav-dropdown-content a:hover{
+.nav-dropdown-content a:hover{
 	color: white;
 	background-color: rgba(0,0,0,.7);
 	box-shadow: 0px 4px 2px rgba(0,0,0, .2);
 }
 
 
-/*-----Dropdown menu stuff-----*/
+/*-----Dropdown menu stuff-----
 .dropdown{
 	position: relative;
 	display: inline-block;
@@ -137,7 +135,7 @@ html,body{
 	left: 0px;
 	margin-top: none;
 	position: absolute;
-	min-width: 120px;
+	min-width: 140px;
 	
 }
 
@@ -165,7 +163,6 @@ html,body{
 /*-----Body Content-----*/
 .bodycontent{
 	position: static;
-	min-width: 980px;
 	top: 40px;
 	background-color: white;
 	min-height: 100%;
@@ -186,7 +183,6 @@ footer, .bodycontent:after{
 /*-----Standard Footer-----*/
 
 footer{
-	min-width: 980px;
 	width: 100%;
 	height: 50px;
 	background-color: #191919;
@@ -412,9 +408,7 @@ canvas{
 	
 }
 
-#presssectiontext{
-	min-width: 980px;
-}
+
 
 .sectiontitle, .sectionsubtitle{
 	max-width: 600px;
