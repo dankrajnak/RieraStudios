@@ -2,7 +2,6 @@
 
 A website currently being developed for Riera Studios based in Havana, Cuba.  The website is meant for museums, individuals, and studios outside of Cuba to learn about and experience the art in the studio.  
 
-It should be online soon!
 
 ##Built from scratch
 
@@ -10,5 +9,11 @@ This is my first time building a website and I did it completely from scratch.  
 
 ##TODO
 * Make mobile-compatible
-* Complete exhibition pages
-* Update bios with most recent information
+	* Reorganize and resize navbar
+		* Add click feature through javascript instead of CSS
+		* Organize so the navbar fits in 800px
+	* Change CSS into LESS?
+	* Use Bootstrap to ensure appropriate sizing?
+
+* Minimize and combine javascript and css
+	* Create gulp file?  

@@ -37,8 +37,6 @@ html,body{
 .menu{
 	min-width: 1080px;
 	height: 40px;
-}
-.menu{
 	background-color: rgba(0, 0, 0, .9);
 	background-blend-mode: hard-light;
 	width: 100%;
