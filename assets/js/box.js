@@ -27,17 +27,19 @@ function setup(){
 
 function draw(){
 	background(255);
+	$('canvas, .click').click(function(){
+		Dot.prototype.explode(dots)
+	});
+
 	//exploded is true when the window is clicked
 	if(Dot.prototype.exploded){
 		//Delete Click if exists
-		var findClickSpan = document.querySelector('.click');
-		if(findClickSpan){
-			findClickSpan.setAttribute("style", "display: none");
-		}
+		$('.click').addClass('hide');
+
 		//Change the pointer
-		select("canvas").addClass("changePointer");
-		select(".header").addClass("changePointer");
-		select("#mainmenu").addClass("changePointer");
+		$("canvas").addClass("changePointer");
+		$(".header").addClass("changePointer");
+		$("#mainmenu").addClass("changePointer");
 
 		//Draw the dots
 		stroke(255, 0, 0);
@@ -49,12 +51,12 @@ function draw(){
 		//Connect the dots
 		stroke(0);
 		Dot.prototype.drawLine(dots);
-		var header = select('.header');
-		var title = select('#title');
-		var subtitle = select('#subtitle');
-		var menu = select('#mainmenu');
-		title.position(20, 20);
-		subtitle.position(24, 80);
+		var header = $('.header');
+		var title = $('#title');
+		var subtitle = $('#subtitle');
+		var menu = $('#mainmenu');
+		title.addClass('title-move');
+		subtitle.addClass('subtitle-move');
 		header.addClass('hide');
 		menu.removeClass('hide');
 		
@@ -81,15 +83,15 @@ function draw(){
 			Dot.prototype.drawLine(dots.slice(0, Math.min((frameCount-200), dots.length)));	
 		}
 		if(frameCount==600){
-			var clickSpan = createSpan('(click)');
-			clickSpan.addClass("click");
+			$('body').append("<span>(click)</span");
+			$('body span').addClass("click");
 		}		
 		
 	}
 }
 
 function mousePressed(){
-	Dot.prototype.explode(dots);
+	//Dot.prototype.explode(dots);
 }
 
 function Dot(){
