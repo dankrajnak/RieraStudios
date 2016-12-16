@@ -28,7 +28,13 @@ function setup(){
 function draw(){
 	background(255);
 	$('canvas, .click').click(function(){
-		Dot.prototype.explode(dots)
+		dots.forEach(function(dot){
+			dot.explode();
+		});
+		Dot.prototype.exploded = true;
+		boxW = 0;
+		boxX = 0;
+		boxY = 0;
 	});
 
 	//exploded is true when the window is clicked
@@ -45,7 +51,7 @@ function draw(){
 		stroke(255, 0, 0);
 		for(i=0; i<dots.length; i++){
 			dots[i].update();
-			ellipse(dots[i].getXPos(), dots[i].getYPos(), dotD, dotD);
+			ellipse(dots[i].xpos, dots[i].ypos, dotD, dotD);
 		}
 
 		//Connect the dots
@@ -75,7 +81,7 @@ function draw(){
 		noStroke();
 		for(i=0; i<dots.length; i++){
 			dots[i].update();
-			ellipse(dots[i].getXPos(), dots[i].getYPos(), dotD, dotD);
+			ellipse(dots[i].xpos, dots[i].ypos, dotD, dotD);
 		}
 
 		if(frameCount>200){
@@ -90,81 +96,49 @@ function draw(){
 	}
 }
 
-function mousePressed(){
-	//Dot.prototype.explode(dots);
-}
 
 function Dot(){
 	//Initial variables.  Give dots random position in box and random velocity
 	Dot.prototype.exploded = false;
-	var xpos = Math.random() * (boxW-dotD+1) + boxX+dotD/2;
-	var ypos = Math.random() * (boxW-dotD+1)+ boxY+dotD/2;
+	this.xpos = Math.random() * (boxW-dotD+1) + boxX+dotD/2;
+	this.ypos = Math.random() * (boxW-dotD+1)+ boxY+dotD/2;
 
-	var velocityX = Math.random()*10-5;
-	var velocityY = Math.random()*10-5;
+	this.velocityX = Math.random()*10-5;
+	this.velocityY = Math.random()*10-5;
 
 	//Function to be executed in draw function
 	this.update = function(){
-		xpos += velocityX;
-		if((xpos<(boxX+dotD/2) || xpos>(boxX+boxW-dotD/2))&&!Dot.prototype.exploded){
-			xpos -= velocityX;
-			velocityX = -velocityX;
-		}
-		ypos +=velocityY;
-		if((ypos<(boxY+dotD/2) || ypos>(boxY+boxW-dotD/2))&&!Dot.prototype.exploded){
-			ypos -=velocityY;
-			velocityY = -velocityY;
+		this.xpos += this.velocityX;
+
+		if((this.xpos<(boxX+dotD/2) || this.xpos>(boxX+boxW-dotD/2))&& !Dot.prototype.exploded){
+			this.xpos -= this.velocityX;
+			this.velocityX = -this.velocityX;
 		}
 
-		if(xpos>windowWidth+80){
-			xpos=-80;
+		this.ypos += this.velocityY;
+		if((this.ypos<(boxY+dotD/2) || this.ypos>(boxY+boxW-dotD/2))&& !Dot.prototype.exploded){
+			this.ypos -=this.velocityY;
+			this.velocityY = -this.velocityY;
 		}
-		if(xpos<-80){
-			xpos=windowWidth+80;
+
+		if(this.xpos>windowWidth+80){
+			this.xpos=-80;
 		}
-		if(ypos>windowHeight+80){
-			ypos=-80;
+		if(this.xpos<-80){
+			this.xpos=windowWidth+80;
 		}
-		if(ypos<-80){
-			ypos=windowHeight+80;
+		if(this.ypos>windowHeight+80){
+			this.ypos=-80;
+		}
+		if(this.ypos<-80){
+			this.ypos=windowHeight+80;
 		}
 	}
-
-	//Getters and setters
-	this.getXPos = function(){
-		return xpos;
-	}
-
-	this.getYPos =function(){
-		return ypos;
-	}
-
-	this.getXVelocity = function(){
-		return velocityX;
-	}
-
-	this.getYVelocity = function(){
-		return velocityY;
-	}
-
-	this.setXVelocity = function(setX){
-		velocityX = setX;
-	}
-
-	this.setYVelocity = function(setY){
-		velocityY = setY;
-	}
-
+	
 	//Function is executed when window is clicked
-	Dot.prototype.explode = function(){
-		for(i=0; i<dots.length; i++){
-			dots[i].setXVelocity(Math.random()*40-20);
-			dots[i].setYVelocity(Math.random()*40-20);
-		}
-		Dot.prototype.exploded = true;
-		boxW = 0;
-		boxX = 0;
-		boxY = 0;
+	this.explode = function(){
+		this.velocityX = Math.random()*40-20;
+		this.velocityY = Math.random()*40-20;
 	}
 
 	//Function to draw the lines between the dots
@@ -173,28 +147,29 @@ function Dot(){
 		
 		//Sort the dots by their xposition
 		dotsArray.sort(function(a, b){
-			return a.getXPos() - b.getXPos();
+			return a.xpos - b.xpos;
 		});
 		
 		//Iterate over the sorted array to find dots close enough in proximity, stopping when a dot is 
 		//too far to the right.  Lines are only drawn from the left to the right to avoid duplicates.
 		for(var i=0; i<dotsArray.length-1; i++){
 			var j=i+1;
-		 	while(j<dotsArray.length && dotsArray[j].getXPos()-dotsArray[i].getXPos()<80){
-				if(sqrt(sq(dotsArray[j].getXPos()-dotsArray[i].getXPos())+sq(dotsArray[j].getYPos()-dotsArray[i].getYPos()))<80){
+		 	while(j<dotsArray.length && dotsArray[j].xpos-dotsArray[i].xpos<80){
+
+				if(sqrt(sq(dotsArray[j].xpos-dotsArray[i].xpos)+sq(dotsArray[j].ypos-dotsArray[i].ypos))<80){
 						
-					stroke((sq(dotsArray[j].getXPos()-dotsArray[i].getXPos())+sq(dotsArray[j].getYPos()-dotsArray[i].getYPos()))/1280*51);
-					line(dotsArray[j].getXPos(), dotsArray[j].getYPos(), dotsArray[i].getXPos(), dotsArray[i].getYPos());
+					stroke((sq(dotsArray[j].xpos-dotsArray[i].xpos)+sq(dotsArray[j].ypos-dotsArray[i].ypos))/1280*51);
+					line(dotsArray[j].xpos, dotsArray[j].ypos, dotsArray[i].xpos, dotsArray[i].ypos);
 						
 					//Weighted average of new velocity.  Groups and slows the dotsArray 
-					if(Math.abs(dotsArray[i].getXVelocity()-dotsArray[j].getXVelocity())>.1){
-						dotsArray[i].setXVelocity((dotsArray[i].getXVelocity()*500+dotsArray[j].getXVelocity())/501);
-						dotsArray[j].setXVelocity((dotsArray[j].getXVelocity()*500+dotsArray[i].getXVelocity())/501);
+					if(Math.abs(dotsArray[i].velocityX-dotsArray[j].velocityX)>.1){
+						dotsArray[i].velocityX = (dotsArray[i].velocityX*500+dotsArray[j].velocityX)/501;
+						dotsArray[j].velocityY = (dotsArray[j].velocityY*500+dotsArray[i].velocityY)/501;
 					}
 
-					if(Math.abs(dotsArray[i].getYVelocity()-dotsArray[j].getYVelocity())>.1){
-						dotsArray[i].setYVelocity((dotsArray[i].getYVelocity()*500+dotsArray[j].getYVelocity())/501);			
-						dotsArray[j].setYVelocity((dotsArray[j].getYVelocity()*500+dotsArray[i].getYVelocity())/501);
+					if(Math.abs(dotsArray[i].velocityY-dotsArray[j].velocityY)>.1){
+						dotsArray[i].velocityX = (dotsArray[i].velocityX*500+dotsArray[j].velocityX)/501;			
+						dotsArray[j].velocityY = (dotsArray[j].velocityY*500+dotsArray[i].velocityY)/501;
 					}
 				}
 			j++;
