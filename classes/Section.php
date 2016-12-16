@@ -163,7 +163,6 @@ abstract class Section{
 		$indexStream = fopen($directoryPath."/index.php", 'w+b');
 		
 		fwrite($indexStream, "<div class=\"section\" id=\"artistsection\">
-			<div style=\"margin-top: 40px\">
 			<div id=\"ninja-slider\">
 			<div>
 			<div class =\"slider-inner\">
@@ -182,7 +181,6 @@ abstract class Section{
 		fwrite($indexStream, "
 			</ul>
 			<div class=\"fs-icon\" title=\"Expand/Close\"></div>
-		</div>
 		</div>
 		</div>
 		</div>
@@ -307,7 +305,6 @@ abstract class Section{
 		
 
 		fwrite($indexStream, "<div class=\"section\" id=\"exhibitionsection\">
-			<div style=\"margin-top: 40px\">
 			<div id=\"ninja-slider\">
 			<div>
 			<div class =\"slider-inner\">
@@ -462,10 +459,10 @@ abstract class Section{
 			//if(!file_exists($view))
 			//{
 				if($subsection && get_class($this)=="Exhibitions"){
-			//		$this->createExhibitionPage($subsection);
+					$this->createExhibitionPage($subsection);
 				}
 				else if($subsection){
-			//		$this->createArtistPage($subsection);
+					$this->createArtistPage($subsection);
 				}
 			//}
 
