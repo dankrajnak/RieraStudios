@@ -13,8 +13,8 @@
           			<a href="#" id="nav-dropdown-button" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ABOUT US
           			</a>
 					<ul class = "dropdown-menu">
-						<li><a href="<?php echo ROOT_PATH ?>/about/">OUR STUDIO</a></li>
-						<li><a href="<?php echo ROOT_PATH ?>/artbrut/">ART BRUT PROJECT CUBA</a></li>
+						<li><a href="<?php echo ROOT_PATH ?>about/">OUR STUDIO</a></li>
+						<li><a href="<?php echo ROOT_PATH ?>artbrut/">ART BRUT PROJECT CUBA</a></li>
 					</ul>
 				</li>
 				<li class = "dropdown">

@@ -1,5 +1,6 @@
 <HTML>
 <head>
+	<meta name="viewport" content="width=device-width">
 	<link type="text/css" rel="stylesheet" href="<?php echo ROOT_PATH;?>assets/css/bootstrap.css"/>
 	<link type="text/css" rel="stylesheet" href="<?php echo ROOT_PATH.STANDARD_CSS ?>"/>
     <link href="<?php echo ROOT_PATH ?>assets/css/ninja-slider.css" rel="stylesheet" />
