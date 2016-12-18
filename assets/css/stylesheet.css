@@ -253,13 +253,21 @@ footer ul{
 
 footer li {
 	font-size: 12px;
-	display: inline;
-	text-align: center;
+	
+	text-align: left;
 	color: white;
 	font-weight: lighter;
 	margin-right: 15px;
+
+
 }
 
+@media(min-width: 786px){
+	footer li{
+		display: inline;
+		text-align: center;
+	}
+}
 
 
 
@@ -340,7 +348,7 @@ canvas{
 }
 
 .sectiontitle, .sectionsubtitle, .sectionbody{
-	width: 70%;
+	width: 90%;
 }
 
 .sectionartistpicture{
@@ -407,7 +415,11 @@ canvas{
 
 
 
-@media(min-width: 768px){
+@media(min-width: 888px){
+
+	.sectiontitle, .sectionsubtitle, .sectionbody{
+	width: 70%;
+}
 
 	.sectiontext{
 	margin-top: 80px;
@@ -471,43 +483,21 @@ canvas{
 }
 	/*Artist Table style*/ 
 
-	.sectiontable{
-		table-layout: fixed;
-		display: block;
-		margin: auto;
-		margin-top: 40px;
-		width: 90%
+	.artisttable div{
+		padding: 30px;
 	}
 
-	.sectiontablebody, .sectiontable tbody{
-		display: block;
-		margin: auto;
-		width: 90%;
+	.artisttable div h4{
 		font-weight: lighter;
+		color: black;
 	}
-
-
-	.sectiontablecontent{
-		width: 100%;
-		display: block;
-		position: relative;
-		margin: auto;
-	}
-
-	.sectiontablecontent tr{
-		display: block;
-		margin: 0px auto 20px auto;
-
-	}
-
-	.sectiontablecontent td{
-		vertical-align: top;
-		overflow: hidden;
-		padding: 20px 20px 0px 20px;
-	}
-
-	.sectiontablecontent a{
+	
+	.artisttable a:hover{
 		text-decoration: none;
+	}
+
+	.artisttable a:hover h4{
+		color: #DE483F;
 	}
 
 	.tablepicture, .tablepicturered{
@@ -524,51 +514,11 @@ canvas{
 
 	}
 
-	.sectiontablecontent span{
-		display: block;
-		z-index: -1;
-		position: relative;
-		font-size: 14px;
-		font-weight: lighter;
-		width: 80%;
-		bottom: 50px;
-
-		margin: auto;
-		text-align: center;
-		padding: 5px 5px 0px 5px;
-		background-color: white;
-		color: #DE483F;	
-
-		 -webkit-animation-duration: .7s;
-	     animation-duration: .7s;
-	      -webkit-animation-fill-mode: both;
-	  		animation-fill-mode: both;
-
-		 -webkit-transition-duration: .7s;
-	    -moz-transition-duration: .7s;
-	    -o-transition-duration: .7s;
-	     transition-duration: .7s;
-	     transition-timing-function: ease;
-	    -webkit-transition-property: -webkit-transform;
-	    -moz-transition-property: -moz-transform;
-	    -o-transition-property: -o-transform;
-	     transition-property: transform;
-	}
-
-
-	.sectiontablecontent a:hover span{
-		z-index: 100;
-	     -webkit-animation-name: flipIn;
-	  	animation-name: flipIn;
-	  	-webkit-backface-visibility: visible !important;
-	  	backface-visibility: visible !important;
-	}
-
-	#artbrutartistssectiontablecontent a:hover .tablepicture{
+	.artisttable a:hover .tablepicture{
 		display: none;
 	}
 
-	#artbrutartistssectiontablecontent a:hover .tablepicturered{
+	.artisttable a:hover .tablepicturered{
 		display: inline;
 
 	}
