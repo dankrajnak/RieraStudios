@@ -1,5 +1,4 @@
 <div class="section" id="exhibitionsection">
-			<div style="margin-top: 40px">
 			<div id="ninja-slider">
 			<div>
 			<div class ="slider-inner">
@@ -25,7 +24,7 @@
 		</div>
 		<div class="sectionmenu" id="exhibitionsectionmenu">
 		<ul>
-				<li id="backbutton"><a href="/Riera/exhibitions"><span>&lt</span> Back</a></li>
+				<li id="backbutton"><a href=""><span>&lt</span> Back</a></li>
 <li><strong style="color: #DE483F; font-size: 20px;">Artists</strong></li>
 <li><a href="/Riera/artbrutartists/Damian-Valdes-Dilla"> Damian Valdes Dilla</a></li>
 </ul>

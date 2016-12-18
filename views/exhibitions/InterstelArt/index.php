@@ -1,5 +1,4 @@
 <div class="section" id="exhibitionsection">
-			<div style="margin-top: 40px">
 			<div id="ninja-slider">
 			<div>
 			<div class ="slider-inner">
@@ -25,10 +24,10 @@
 		</div>
 		<div class="sectionmenu" id="exhibitionsectionmenu">
 		<ul>
-				<li id="backbutton"><a href="/Riera/exhibitions"><span>&lt</span> Back</a></li>
+				<li id="backbutton"><a href="http://localhost/Riera/exhibitions/"><span>&lt</span> Back</a></li>
 <li><strong style="color: #DE483F; font-size: 20px;">Artists</strong></li>
 <li>Marcos Antonio Guerrero Herrera</li>
-<li>Luis de Jes&uacute;s Sotorrios F&aacute;bregas</li>
+<li><a href="/Riera/artbrutartists/Luis-De-Jesus-Sotorrios-Fabregas"> Luis de Jes&uacute;s Sotorrios F&aacute;bregas</a></li>
 <li>Emili Tito Guerrero</li>
 </ul>
 

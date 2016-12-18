@@ -1,5 +1,4 @@
 <div class="section" id="exhibitionsection">
-			<div style="margin-top: 40px">
 			<div id="ninja-slider">
 			<div>
 			<div class ="slider-inner">
