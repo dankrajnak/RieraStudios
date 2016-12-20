@@ -220,7 +220,7 @@ html,body{
 	top: 40px;
 	background-color: white;
 	min-height: 100%;	
-	margin-bottom: -20px; //header height + footer - 6
+	margin-bottom: -20px; 
 }
 
 .bodycontent:after{
@@ -287,7 +287,7 @@ canvas{
 /*-----Section Elements-----*/
 
 .section{
-	margin-top: 56px; //make room for navbar.
+	margin-top: 56px;
 }
 
 @media(min-width: 768px){
@@ -306,10 +306,11 @@ canvas{
 }
 
 
-.sectionmenu a:not(#backbutton):hover:{
+.sectionmenu a:not(#backbutton):hover{
 	color: white;
 	background-color: #DE483F;
 	border-color: #DE483F;
+	text-decoration: none;
 }
 
 .sectiontext{
@@ -539,16 +540,6 @@ canvas{
 	  		animation-fill-mode: both;
 	}
 
-
-	.exhibitiontablepicture:hover {
-		
-		//-webkit-animation-name: pushup;
-	//	animation-name: pushup;
-		-webkit-backface-visibility: visible !important;
-	  	backface-visibility: visible !important;
-	  	
-	}
-
 	.exhibitiontitle{
 		height: 140px;
 	}
@@ -562,6 +553,10 @@ canvas{
 	.exhibitiondate{
 		font-size: 14px;
 		font-weight: lighter;
+	}
+
+	.exhibitiontablepicture:hover, .exhibitiontitle h2:hover, .exhibitiondate:hover{
+		cursor: pointer;
 	}
 
 
@@ -750,21 +745,21 @@ canvas{
 
 @font-face{
 	font-family: 'importedCalibri';
-	src: url('calibri.ttf') format('truetype');
+	src: url('Calibri-Regular.otf') format('opentype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face{
 	font-family: 'importedCalibri';
-	src: url('calibri-light.ttf') format('truetype');
+	src: url('Calibri-Light.otf') format('opentype');
 	font-weight: lighter;
 	font-style: normal;
 }
 
 @font-face{
 	font-family: 'importedCalibri';
-	src: url('calibri-bold.ttf') format('truetype');
+	src: url('Calibri-Bold.otf') format('opentype');
 	font-weight: bold;
 	font-style: normal;
 }

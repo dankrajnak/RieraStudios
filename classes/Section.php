@@ -456,15 +456,16 @@ abstract class Section{
 			require('standardElements/standardNavBar.php');
 			echo "\n<div class=\"navbarscroll\"></div>";
 			echo "\n<div class=\"bodycontent\">\n";
-			//if(!file_exists($view))
-			//{
+			
+			/*if(!file_exists($view))
+			{
 				if($subsection && get_class($this)=="Exhibitions"){
 					$this->createExhibitionPage($subsection);
 				}
 				else if($subsection){
 					$this->createArtistPage($subsection);
 				}
-			//}
+			}*/
 
 			if(file_exists($view)){
 				require($view);
